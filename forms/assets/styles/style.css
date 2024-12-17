@@ -1,0 +1,126 @@
+header{
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+    font-family: Jaro;
+    color: #F05365;
+}
+
+tr{
+    height: 40px;
+    padding: 0 10;
+}
+
+#registration_form{
+    background: #D9D9D9;
+    width: 60%;
+    margin:0 20%;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.labels{
+    text-align: right;
+}
+.fields{
+    text-align: left;
+    padding-left: 10px;
+}
+label {
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    color: #925E78;
+}
+span {
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 18px;
+    color: #7e7e7e;
+}
+.radio_label{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 18px;
+    color: #7e7e7e;
+}
+
+*:focus {
+    outline: none;
+}
+input[type=radio], input[type=number]{
+    cursor: pointer;
+}
+input[type=text ], input[type=password]{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 15px;
+    color: #7e7e7e;
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+    width: 40%;
+    padding-left: 5%;
+}
+select{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 15px;
+    color: #7e7e7e;
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+    width: 40%;
+    padding-left: 5%;
+}
+#age{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 15px;
+    color: #7e7e7e;
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+    width: 10%;
+    padding-left: 2%;
+}
+#address{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 15px;
+    color: #7e7e7e;
+    border-radius: 10px;
+    border: 0;
+    width: 40%;
+    padding: 5%;
+    resize: none;
+}
+#consent_row{
+    text-align: center;
+}
+#consent_label{
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 18px;
+    color: #7e7e7e;
+    text-align: center;
+}
+input[type=reset], input[type=submit]{
+    background: #FABC2A;
+    color: #F05365;
+    width: 20%;
+    height: 40px;
+    font-family: Jaro;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+footer{
+    height: 25px;
+}

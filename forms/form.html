@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>A form to fill out:</h1>
+    </header>
+    <form action="send.php" method="post"  id="registration_form">
+    <table>
+        <tr>
+          <td class="labels"><label for="name">full name:</label></td>
+          <td class="fields"><span>*  </span><input type="text" placeholder="John Joseph Doe" required></td>
+        </tr>
+        <tr>
+            <td class="labels"><label for="password">password:</label></td>
+            <td class="fields"><span>*  </span><input type="password"placeholder="your password here" required></td>
+        </tr>
+        <tr>
+            <td class="labels"><label for="repeat_password">repeat password:</label></td>
+            <td class="fields"><span>*  </span><input type="password"placeholder="your password again" required></td>
+        </tr>
+        <tr>
+            <td class="labels"><label for="gender">gender:</label></td>
+            <td class="fields">
+                <input type="radio" name="gender" id="male" value="male">
+                <label class="radio_label" for="male">male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label class="radio_label" for="female">female</label>
+                <input type="radio" name="gender" id="none" value="none">
+                <label class="radio_label" for="none">prefer not to say</label>
+            </td>
+            <tr>
+                <td class="labels"><label for="age">age:</label></td>
+                <td class="fields"><input type="number" name="age" id="age" min="1"max="120"><span>  years old</span></td>
+            </tr>
+            <tr>
+                <td class="labels"><label for="course">course:</label></td>
+                <td class="fields">
+                    <span>*  </span><select name="course" id="course" placeholder="Select" required> 
+                        <option value="" disabled selected value>-- select an option --</option>
+                        <option value="advanced_nose_picking">Advanced Nose Picking</option>
+                        <option value="daydreaming">Daydreaming</option>
+                        <option value="sand_castle_architecture">Sand Castle Architecture</option>
+                        <option value="card_smoking">Card Smoking</option>
+                        <option value="dragon_hunting">Dragon Bow Hunting</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="address_row">
+                <td class="labels"><label for="address">address:</label></td>
+                <td class="fields"><textarea id ="address" rows="3" placeholder="Country, region, city/town, street name, building etc."></textarea></td>
+            </tr>
+            <tr>
+                <td class="labels"></td>
+                <td class="fields"> 
+                    <input type="checkbox" name="consent" id="consent" value="True" required>
+                    <label for="consent"  id="consent_label">I consent to the processing of personal data</label>
+                </td>
+            </tr>
+  </table>
+   <span>
+    <input type="reset" value="clear form">
+    <input type="submit" value="submit!">
+    </span>
+  </form>
+  
+<footer>
+    
+</footer>
+
+</body>
+</html>
