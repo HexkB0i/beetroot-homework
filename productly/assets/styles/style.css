@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+h2{
+    font-family: Montserrat;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2F281E;
+}
+h3{
+    font-family: Montserrat;
+    font-size: 22px;
+    line-height: 27px;
+    color: #2F281E;
+}
+.simpleText{
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #2F281E;
+}
+.subtitle{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -66,30 +91,31 @@
     background-color: #ee8f00;
 }
 
-#heroContainer{
+.content{
     display: flex;
-    margin: 10vw;
-    justify-content: center;
+    margin: 4vw;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
-#heroPitch{
+.contentPitch{
     width: 50%;
 }
-#heroPitchHeader{
+.contentPitchHeader{
     font-family: Montserrat;
     font-weight: 700;
     font-size: 44px;
     line-height: 54px;
     color: #2F281E;
 }
-#heroPitchText{
+.contentPitchText{
     font-family: Montserrat;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     color: #2F281E;
 }
-#heroPitchButton{
+.contentPitchButton{
     width: 180px;
     height: 50px;
     color: #ffffff;
@@ -102,12 +128,50 @@
     background-color: #FF9900;
     cursor: pointer;
 }
-#heroPitchButton:hover{
+.contentPitchButton:hover{
     background-color: #ee8f00;
 }
-#heroImage img{
+.contentImage img{
     width: 550px;
     height: auto;
 }
 
+.centeringContainer{
+    width: 100%;
+    text-align: center;
+}
+.toolsGradient{
+    background-image: url("../images/bg-tools.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tools{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.toolsItem{
+    max-width: 270px;
+}
+
+#signUpNow{
+    margin-top: 70px;
+    margin-bottom: 74px;
+}
+
+.designProfessionalsText{
+    max-width: 35%;
+}
+
+.checkedList  li{
+    background: url(../images/list-check.svg) no-repeat 7px 7px transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0px 1px 24px;
+    vertical-align: middle;
+}
+
+
+    /* list-style-image: url("../images/list-check.svg"); */
 
