@@ -12,6 +12,20 @@ $primary: $flax;
 $secondary:$coral;
 $danger: $cordovan;
 
+// Additional font sizes
+
+$font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+  7: 2rem,
+  8: 1.5rem,
+  9: 12px
+);
+
 // import bootstrap to apply changes
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -23,6 +37,7 @@ $danger: $cordovan;
 
 body{
     font-family: Meslo;
+    background-color: #e4e4e4;
 }
 
 
