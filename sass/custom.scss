@@ -1,0 +1,30 @@
+// Custom.scss
+// Custom colors
+// https://coolors.co/8e3b46-e1dd8f-e0777d-4c86a8-477890
+
+$cordovan: #8e3b46ff;
+$flax: #e1dd8fff;
+$coral: #e0777dff;
+$ablue: #4c86a8ff;
+$cerulean: #477890ff;
+
+$primary: $flax;
+$secondary:$coral;
+$danger: $cordovan;
+
+// import bootstrap to apply changes
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// My styling
+@font-face {
+    font-family: Meslo;
+    src: url("/assets/fonts/MesloLGSNerdFontMono-Regular.ttf");
+}
+
+body{
+    font-family: Meslo;
+}
+
+
+
+
