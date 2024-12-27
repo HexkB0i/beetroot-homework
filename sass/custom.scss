@@ -3,14 +3,17 @@
 // https://coolors.co/8e3b46-e1dd8f-e0777d-4c86a8-477890
 
 $cordovan: #8e3b46ff;
+$cordovan-subtle:#DDACB3;
 $flax: #e1dd8fff;
 $coral: #e0777dff;
 $ablue: #4c86a8ff;
 $cerulean: #477890ff;
 
-$primary: $flax;
-$secondary:$coral;
+$primary: $coral;
+$secondary:$flax;
 $danger: $cordovan;
+$success: $cerulean;
+$info: $ablue;
 
 // Additional font sizes
 
@@ -26,6 +29,26 @@ $font-sizes: (
   9: 12px
 );
 
+// Additional gaps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6.5
+);
+
+
+// Accordion f*ckery
+$accordion-button-focus-box-shadow: none;
+$accordion-button-active-bg: none;
+$accordion-button-active-color: none;
+
+
 // import bootstrap to apply changes
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -38,6 +61,12 @@ $font-sizes: (
 body{
     font-family: Meslo;
     background-color: #e4e4e4;
+}
+
+.latest-window{
+  max-height: fit-content;
+  background-color: white;
+  border-radius: 5px;
 }
 
 
