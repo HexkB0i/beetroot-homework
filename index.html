@@ -3,27 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Homework</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Homework Portal</title>
+    <link rel="stylesheet" href="/sass/custom.css">
 </head>
-<body>
-    <header>
-        <h1>This is my Git example</h1>
+<body class="">
+    <header class="header">
+        <div class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h1 class="text-center text-danger fw-bold mt-5 mb-3">Oleh's homework portal</h1>
+                </div>
+                <div class="col-6 text-left">
+                    <span class="text-center text-success fs-9 fst-italic">-- Here you can find all of the homework assignments I have done within the scope of the Beetroot Academy Front-end development course.</span>
+                </div>
+            </div>
+        </div>
     </header>
-    
-    <main>
-        <section id="content">
-            <p>-- thist text was added in the first commit.</p>
-            <h2>The list of my homeworks as of today</h2>
-            <ul>
-                <li><a href="forms/form.html">Forms</a></li>
-                <li><a href="novik/resume1.html">Novik resume page</a></li>
-                <li><a href="productly/productly.html">Productly homework (as of lesson 13)</a></li>
-                <li><a href="grid(lesson 13)/grid.html">Grid homework (as of lesson 13)</a></li>
-            </ul>
-        </section>
-    </main>
+    <main class="main mb-5">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h4 class="text-danger"> Latest assignment description:</h4>
+                </div>
+                <div class="col-10 p-3 border border-success latest-window">
+                    <p id="latest-assignment__description">
+                        This is supposed the highlight window for the latest assignment I've completed but I haven't written a script to grab it from the end of the list yet. :/
+                    </p>
+                    <div class="col-12 d-flex gap-7 justify-content-center mt-4">
+                        <div class="scroll-down__pls d-flex gap-3 text-danger">
+                            <img src="/assets/img/arrow-down-icon.svg" class="arrow-down">
+                            <a href="#bottom">Scroll down to see the assignments.</a>
+                            <img src="/assets/img/arrow-down-icon.svg" class="arrow-down">
+                        </div>
 
-    <footer></footer>
+
+                        <!-- <div id="latest-assignment__page">
+                            <a href=""><button class="btn btn-danger">Visit page</button></a>
+                        </div>
+                        <div>
+                            <a href=""><button class="btn btn-danger">View code</button></a>
+                        </div> -->
+                    </div>                
+                </div>
+            <section id="assignments" class="row mt-3 justify-content-center">
+                <div class=" col-10">
+                    <div class="accordion" id="past-works">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                    Forms
+                                </button>
+                            </h3>
+                            <div id="collapse1" class="accordion-collapse collapse">
+                                <div class="accordion-body d-flex flex-column align-items-evenly">
+                                    <p>
+                                        The task was to create a form with input of different types and buttons to submit or reset the form. Some of the fields are required. 
+                                    </p>
+                                    <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                        <div>
+                                            <a href="/forms/form.html"><button class="btn btn-success">Visit page</button></a>
+                                        </div>
+                                        <div>
+                                            <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/forms"><button class="btn btn-success">View code</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                    Denis Novik Portfolio page
+                                </button>
+                            </h3>
+                            <div id="collapse2" class="accordion-collapse collapse">
+                                <div class="accordion-body d-flex flex-column align-items-evenly">
+                                    <p>
+                                        We have used this template for multiple tasks including basic semantic tag utilization to linking Google Fonts API to pseudo classes.
+                                    </p>
+                                </div>
+                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                    <div>
+                                        <a href="/novik/resume1.html"><button class="btn btn-success">Visit page</button></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/novik"><button class="btn btn-success">View code</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                                    Productly
+                                </button>
+                            </h3>
+                            <div id="collapse3" class="accordion-collapse collapse">
+                                <div class="accordion-body d-flex flex-column align-items-evenly">
+                                    <p>
+                                        This one I haven't had time to finish :( but this one was about utilizing flexbox which is always pleasant to do.
+                                    </p>
+                                </div>
+                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                    <div>
+                                        <a href="/productly/productly.html"><button class="btn btn-success">Visit page</button></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/productly"><button class="btn btn-success">View code</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                                    Grid gallery
+                                </button>
+                            </h3>
+                            <div id="collapse4" class="accordion-collapse collapse">
+                                <div class="accordion-body d-flex flex-column align-items-evenly">
+                                    <p>
+                                        This task was about using grid layout. It is cool to see that if the page is designed in a way that can be represented as a grid it is extremely easy to craft a nice layout with only a few classes.
+                                    </p>
+                                </div>
+                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                    <div>
+                                        <a href="/grid(lesson 13)/"><button class="btn btn-success">Visit page</button></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/grid(lesson%2013)"><button class="btn btn-success">View code</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a name="bottom"></a>  
+        </div>
+    </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/myJS/latest-assignment.js"></script>
 </html>
