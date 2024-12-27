@@ -12807,7 +12807,7 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: Meslo;
-  src: url("/assets/fonts/MesloLGSNerdFontMono-Regular.ttf");
+  src: url("assets/fonts/MesloLGSNerdFontMono-Regular.ttf");
 }
 body {
   font-family: Meslo;
