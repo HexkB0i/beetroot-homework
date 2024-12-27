@@ -12819,4 +12819,9 @@ body {
   max-height: fit-content;
   background-color: white;
   border-radius: 5px;
+}
+
+.arrow-down {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=custom.css.map */
