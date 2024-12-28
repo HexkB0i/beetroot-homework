@@ -8,49 +8,81 @@
 </head>
 <body class="my-font">
     <header class="header">
+        <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+            <a class="" data-bs-toggle="offcanvas" href="#offcanvasContacts" role="button" aria-controls="offcanvasContacts">
+                <div class="sidebar-icon m-4">
+                    <div class="sidebar-icon__element"></div>
+                    <div class="sidebar-icon__element"></div>
+                    <div class="sidebar-icon__element"></div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasContacts" aria-labelledby="offcanvasContactsLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title" id="offcanvasContactsLabel"><b>Contact me via:</b></h4>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="mx-4 d-flex flex-column">
+                    <div class="linkedin d-flex align-items-center gap-4">
+                        <a href="" class="link-primary link-opacity-75-hover link-underline-opacity-0"><h6 class="nerd-icon"></h6></a> <span><i>-- Linkedin</i></span>
+                    </div>
+                    <div class="twitter d-flex align-items-center gap-4">
+                        <a href="" class="link-primary link-opacity-75-hover link-underline-opacity-0"><h6 class="nerd-icon"></h6></a> <span><i>-- Twitter</i></span>
+                    </div>
+                    <div class="github d-flex align-items-center gap-4">
+                        <a href="" class="link-primary link-opacity-75-hover link-underline-opacity-0"><h6 class="nerd-icon"></h6></a> <span><i>-- GitHub</i></span>
+                    </div>
+                    <div class="email d-flex align-items-center gap-4">
+                        <a href="" class="link-primary link-opacity-75-hover link-underline-opacity-0"><h6 class="nerd-icon">󰇰</h6></a> <span><i>-- Email</i></span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div class="container mb-5">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <h1 class="text-center text-danger fw-bold mt-5 mb-3">Oleh's homework portal</h1>
+                    <h1 class="text-center text-primary fw-bold mt-5 mb-3">Oleh's homework portal</h1>
                 </div>
                 <div class="col-6 text-left">
-                    <span class="text-center text-success fs-9 fst-italic">-- Here you can find all of the homework assignments I have done within the scope of the Beetroot Academy Front-end development course.</span>
+                    <span class="text-center text-secondary fs-9 fst-italic">-- Here you can find all of the homework assignments I have done within the scope of the Beetroot Academy Front-end development course.</span>
                 </div>
             </div>
         </div>
     </header>
     <main class="main mb-5">
-        <div class="container px-5">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <h4 class="text-danger"> Latest assignment description:</h4>
+                    <h4 class="text-primary"> Latest assignment description:</h4>
                 </div>
-                <div class="col-10 p-3 border border-success latest-window">
+                <div class="col-10 p-3 border border-secondary latest-window">
                     <p id="latest-assignment__description">
                         if you can read this then the script is broken
                     </p>
                     <div class="col-12 d-flex gap-7 justify-content-center mt-4">
-                        <div class="scroll-down__pls d-flex gap-3 text-danger">
+                        <div class="scroll-down__pls d-flex gap-3 text-primary">
                             <img src="assets/img/arrow-down-icon.svg" class="arrow-down">
-                            <a href="#bottom" class="scroll-link text-danger">Scroll down to see the assignments.</a>
+                            <a href="#bottom" class="scroll-link text-primary">Scroll down to see the assignments.</a>
                             <img src="assets/img/arrow-down-icon.svg" class="arrow-down">
                         </div>
-
-
                         <!-- <div id="latest-assignment__page">
-                            <a href=""><button class="btn btn-danger">Visit page</button></a>
+                            <a href=""><button class="btn btn-primary">Visit page</button></a>
                         </div>
                         <div>
-                            <a href=""><button class="btn btn-danger">View code</button></a>
+                            <a href=""><button class="btn btn-primary">View code</button></a>
                         </div> -->
                     </div>                
                 </div>
-            <section id="assignments" class="row mt-3 justify-content-center">
+            <section id="assignments" class="row mt-5 justify-content-center">
                 <div class=" col-10">
                     <div class="accordion" id="past-works">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button fs-10 fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                     Forms
                                 </button>
                             </h3>
@@ -59,12 +91,12 @@
                                     <p>
                                         The task was to create a form with input of different types and buttons to submit or reset the form. Some of the fields are required. 
                                     </p>
-                                    <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                    <div class="col-12 d-flex justify-content-evenly mb-3">
                                         <div>
-                                            <a href="works/forms/form.html"><button class="btn btn-success">Visit page</button></a>
+                                            <a href="works/forms/form.html"><button class="btn btn-secondary">Visit page</button></a>
                                         </div>
                                         <div>
-                                            <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/forms"><button class="btn btn-success">View code</button></a>
+                                            <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/forms"><button class="btn btn-secondary">View code</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +104,7 @@
                         </div>
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button fs-10 fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
                                     Denis Novik Portfolio page
                                 </button>
                             </h3>
@@ -82,19 +114,19 @@
                                         We have used this template for multiple tasks including basic semantic tag utilization to linking Google Fonts API to pseudo classes.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                <div class="col-12 d-flex justify-content-evenly mb-3">
                                     <div>
-                                        <a href="works/novik/resume1.html"><button class="btn btn-success">Visit page</button></a>
+                                        <a href="works/novik/resume1.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
                                     <div>
-                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/novik"><button class="btn btn-success">View code</button></a>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/novik"><button class="btn btn-secondary">View code</button></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button fs-10 fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
                                     Productly
                                 </button>
                             </h3>
@@ -104,19 +136,19 @@
                                         This one I haven't had time to finish :( but this one was about utilizing flexbox which is always pleasant to do.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                <div class="col-12 d-flex justify-content-evenly mb-3">
                                     <div>
-                                        <a href="works/productly/productly.html"><button class="btn btn-success">Visit page</button></a>
+                                        <a href="works/productly/productly.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
                                     <div>
-                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/productly"><button class="btn btn-success">View code</button></a>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/productly"><button class="btn btn-secondary">View code</button></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button fs-10 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button fs-10 fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
                                     Grid gallery
                                 </button>
                             </h3>
@@ -126,12 +158,12 @@
                                         This task was about using grid layout. It is cool to see that if the page is designed in a way that can be represented as a grid it is extremely easy to craft a nice layout with only a few classes.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex gap-7 justify-content-center mb-3">
+                                <div class="col-12 d-flex justify-content-evenly mb-3">
                                     <div>
-                                        <a href="works/grid(lesson 13)/grid.html"><button class="btn btn-success">Visit page</button></a>
+                                        <a href="works/grid(lesson 13)/grid.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
                                     <div>
-                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/grid(lesson%2013)"><button class="btn btn-success">View code</button></a>
+                                        <a href="https://github.com/HexkB0i/beetroot-homework/tree/main/works/grid(lesson%2013)"><button class="btn btn-secondary">View code</button></a>
                                     </div>
                                 </div>
                             </div>

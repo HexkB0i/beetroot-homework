@@ -9,10 +9,10 @@ $coral: #e0777dff;
 $ablue: #4c86a8ff;
 $cerulean: #477890ff;
 
-$primary: $coral;
-$secondary:$flax;
-$danger: $cordovan;
-$success: $cerulean;
+$primary: $cordovan;
+$secondary:$cerulean;
+$danger: $coral;
+$warning: $flax;
 $info: $ablue;
 
 // Additional font sizes
@@ -53,6 +53,9 @@ $accordion-button-active-color: none;
   object-fit: contain;
 }
 
+//Close button
+$btn-close-focus-shadow: none;
+
 // import bootstrap to apply changes
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -84,6 +87,20 @@ body{
   text-decoration: none;
 }
 
-
-
-
+.sidebar-icon{
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar-icon__element{
+  width: 100%;
+  height: 6px;
+  background-color: $cordovan;
+  border-radius: 5px;
+}
+.nerd-icon{
+  font-size: 70px;
+}
