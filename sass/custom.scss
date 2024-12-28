@@ -59,12 +59,14 @@ $accordion-button-active-color: none;
 // My styling
 @font-face {
     font-family: Meslo;
-    src: url("assets/fonts/MesloLGSNerdFontMono-Regular.ttf");
+    src: url("../assets/fonts/MesloLGSNerdFontMono-Regular.ttf");
 }
 
 body{
-    font-family: Meslo;
     background-color: #e4e4e4;
+}
+.my-font{
+  font-family: Meslo;
 }
 
 .latest-window{
@@ -76,6 +78,10 @@ body{
 .arrow-down{
   width: 20px;
   height: 20px;
+}
+
+.scroll-link{
+  text-decoration: none;
 }
 
 
