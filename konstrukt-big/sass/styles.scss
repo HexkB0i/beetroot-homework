@@ -14,15 +14,16 @@ $border-light: #bdbdbd;
 
 //Global CSS
 a{
-    color: $text-light;
-    text-decoration: none;
-    
+    color: $text-light;    
 }
 a:hover{
     opacity: 0.6;
 }
 
 // Header CSS
+header a{
+    text-decoration: none;
+}
 .container-header{
     max-width: 85%;
     height: 10vh;
@@ -87,6 +88,9 @@ main{
     flex-direction: column;
     gap: 70px;
 }
+.chapter-list a {
+    text-decoration: none;
+}
 .chapter-list__item{
     font-family: Francois One;
     font-weight: 400;
@@ -97,9 +101,6 @@ main{
 }
 .doc-text{
     max-width: 63%;
-}
-.doc-text a{
-    text-decoration: solid 1px $text-light !important;
 }
 .doc-section{
     margin-bottom: 70px;
@@ -146,6 +147,7 @@ main{
     display: block;
     margin: 30px 0;
 }
+
 .highlight{
     background-color: $border-light;
     white-space:nowrap;

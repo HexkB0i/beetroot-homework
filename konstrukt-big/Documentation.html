@@ -99,11 +99,34 @@
                                 <br>
                                 <strong>+ JSX.</strong> React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so:  
                                 <span class="highlight">&ltText&gt Hello, I am your cat!&lt/Text&gt</span>.
+                                <br>
+                                The React docs have <a href="https://legacy.reactjs.org/docs/introducing-jsx.html">a comprehensive guide to JSX</a> you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span class="highlight">name</span> for the cat, name, and embedding it with curly braces inside <span class="highlight">&ltText&gt</span> 
+                                <br>
+                                <strong>+ props.</strong> Props is short for “properties”.
+                                <br>
+                                <strong>+ state.</strong> While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or that comes from user interaction. State gives your components memory! 
                             </p>
                         </div>
                     </div>
                 </section>
-                <section class="doc-section"></section>
+                <section class="doc-section">
+                    <div class="doc-section__title">
+                        <div class="doc-section__decor">
+                            <div class="black-bar"></div>
+                        </div>
+                        <div class="doc-section__heading">
+                            <div class="doc-section__name"><span>HANDLING TEXT INPUT</span></div>
+                            <div class="doc-section__chapter"><span>Chapter 4</span></div>
+                        </div>
+                    </div>
+                    <div class="doc-section__text">
+                        <p>
+                            TextInput is a Core Component that allows the user to enter text. It has an onChangeText prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called when the text is submitted.
+                            <br>
+                            For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated as "🍕 🍕".
+                        </p>
+                    </div>
+                </section>
             </article>
         </div>
     </main>
