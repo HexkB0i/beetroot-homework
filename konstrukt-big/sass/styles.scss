@@ -1,0 +1,164 @@
+// Colors
+$text-light: #000000;
+$text-dark: #ffffff;
+
+$bg-light: #ffffff;
+$bg-dark: #000000;
+
+$border-light: #bdbdbd;
+  
+
+
+// Font import
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Global CSS
+html {
+    scroll-behavior: smooth;
+}
+
+a{
+    color: $text-light;    
+}
+a:hover{
+    opacity: 0.5;
+}
+
+// Header CSS
+header a{
+    text-decoration: none;
+}
+.container-header{
+    max-width: 85%;
+    height: 10vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    margin-top: 20px;
+}
+.nav-group{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.lang-switch{
+    font-family: Tourney;
+    font-size: 22px;
+    line-height: 18px;
+    font-weight: 600;
+    color: $text-light;
+}
+.lang-switch__link{
+    transition: 0.2s;
+}
+.page-select{
+    font-family: Staatliches;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: $text-light;
+}
+.page-select__link{
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+// Main CSS
+main{
+    position: relative;
+}
+.bg-decal{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.container-main{
+    max-width: 85%;
+    margin: 70px auto 0px;
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.chapter-list{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+}
+.chapter-list a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+.chapter-list__item{
+    font-family: Francois One;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    border-bottom: 1px solid $border-light;
+    padding-bottom: 5px;
+}
+.doc-text{
+    max-width: 63%;
+}
+.doc-section{
+    margin-bottom: 70px;
+}
+.black-bar{
+    width: 100px;
+    height: 8px;
+    background-color: $bg-dark;
+    content: " ";
+}
+.doc-section__title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.doc-section__heading{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 10px;
+
+}
+.doc-section__name{
+    font-family: Francois One;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 400;
+    padding-top: 5px;;
+}
+.doc-section__chapter{
+    font-family: Farro;
+    font-size: px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+}
+.doc-section__text{
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+.doc-section__text br{
+    display: block;
+    margin: 30px 0;
+}
+
+.highlight{
+    background-color: $border-light;
+    white-space:nowrap;
+}

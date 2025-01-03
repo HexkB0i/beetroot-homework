@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap");
+.container-main {
+  flex-direction: column;
+}
+
+.clients-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.clients-header {
+  font-family: Roboto;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.clients-grid {
+  width: 100%;
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 30px;
+  padding: 30px 15px 30px;
+  border-top: 2px solid #bdbdbd;
+  border-bottom: 2px solid #bdbdbd;
+  margin-bottom: 40px;
+}
+
+.clients-grid__item {
+  border-radius: 8px;
+}
+
+.facebook {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/facebook-logo-white.svg");
+}
+
+.facebook:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/facebook-logo-black.svg");
+}
+
+.instagram {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/instagram-logo-white.svg");
+}
+
+.instagram:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/instagram-logo-black.svg");
+}
+
+.shopify {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/shopify-logo-white.svg");
+}
+
+.shopify:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/shopify-logo-black.svg");
+}
+
+.skype {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/skype-logo-white.svg");
+}
+
+.skype:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/skype-logo-black.svg");
+}
+
+.pinterest {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/pinterest-logo-white.svg");
+}
+
+.pinterest:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/pinterest-logo-black.svg");
+}
+
+.wix {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/wix.com-logo-white.svg");
+}
+
+.wix:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/wix.com-logo-black.svg");
+}
+
+.salesforce {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/saleforse-logo-white.svg");
+}
+
+.salesforce:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/saleforse-logo-black.svg");
+}
+
+.soundcloud {
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+  background-image: url("../assets/img/soundcloud-logo-white.svg");
+}
+
+.soundcloud:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+  background-image: url("../assets/img/soundcloud-logo.svg");
+}/*# sourceMappingURL=hovers.css.map */
