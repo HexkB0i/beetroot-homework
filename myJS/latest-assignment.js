@@ -10,3 +10,18 @@ const bodyText = lastBody.innerText;
 document.getElementById("latest-assignment__description").innerHTML = bodyText;
 
 // I am ashamed of using AI to help me with this code
+
+// Select last buttons
+const pageButtons = document.querySelectorAll('.work-link__page');
+const lastPageButton = pageButtons[pageButtons.length - 1];
+
+const codeButtons = document.querySelectorAll('.work-link__code');
+const lastCodeButton = codeButtons[codeButtons.length - 1];
+
+// Get html
+const lastPageInsert = lastPageButton.innerHTML;
+const lastCodeInsert = lastCodeButton.innerHTML;
+
+//Insert it too
+document.getElementById("latest-assignment__page").innerHTML = lastPageInsert;
+document.getElementById("latest-assignment__code").innerHTML = lastCodeInsert;
