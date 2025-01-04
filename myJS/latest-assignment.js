@@ -19,8 +19,8 @@ const codeButtons = document.querySelectorAll('.work-link__code');
 const lastCodeButton = codeButtons[codeButtons.length - 1];
 
 // Get html
-const lastPageInsert = lastPageButton.innerHTML;
-const lastCodeInsert = lastCodeButton.innerHTML;
+var lastPageInsert = lastPageButton.innerHTML;
+var lastCodeInsert = lastCodeButton.innerHTML;
 
 //Insert it too
 document.getElementById("latest-assignment__page").innerHTML = lastPageInsert;
