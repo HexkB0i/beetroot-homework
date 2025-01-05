@@ -64,6 +64,8 @@ header a{
     font-size: 22px;
     line-height: 27px;
     color: $text-light;
+    display: flex;
+    flex-direction: row;
 }
 .page-select__link{
     text-decoration: none;
