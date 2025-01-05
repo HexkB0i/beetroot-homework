@@ -18,7 +18,7 @@
             </a>
         </div>
         
-        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasContacts" aria-labelledby="offcanvasContactsLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasContacts" aria-labelledby="offcanvasContactsLabel">
             <div class="offcanvas-header">
               <h4 class="offcanvas-title" id="offcanvasContactsLabel"><b>Contact me via:</b></h4>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -64,12 +64,12 @@
                         if you can read this then the script is broken
                     </p>
                     <div class="col-12 d-flex gap-7 justify-content-center mt-4">
-                        <div class="col-12 d-flex justify-content-evenly mb-3">
+                        <div class="col-12 d-flex justify-content-evenly gap-4 mb-3">
                             <div class="work-link__page" id="latest-assignment__page">
-
+                                <!-- button is inserted with js -->
                             </div>
                             <div class="work-link__code" id="latest-assignment__code">
-
+                                <!-- button is inserted with js -->
                             </div>
                         </div>
                     </div>                
@@ -88,7 +88,7 @@
                                     <p>
                                         The task was to create a form with input of different types and buttons to submit or reset the form. Some of the fields are required. 
                                     </p>
-                                    <div class="col-12 d-flex justify-content-evenly mb-3">
+                                    <div class="col-12 d-flex gap-2 px-2 justify-content-evenly mb-3">
                                         <div class="work-link__page">
                                             <a href="works/forms/form.html"><button class="btn btn-secondary">Visit page</button></a>
                                         </div>
@@ -111,7 +111,7 @@
                                         We have used this template for multiple tasks including basic semantic tag utilization to linking Google Fonts API to pseudo classes.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex justify-content-evenly mb-3">
+                                <div class="col-12 d-flex gap-2 px-2 justify-content-evenly mb-3">
                                     <div class="work-link__page">
                                         <a href="works/novik/resume1.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
@@ -133,7 +133,7 @@
                                         This one I haven't had time to finish :( but this one was about utilizing flexbox which is always pleasant to do.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex justify-content-evenly mb-3">
+                                <div class="col-12 d-flex gap-2 px-2 justify-content-evenly mb-3">
                                     <div class="work-link__page">
                                         <a href="works/productly/productly.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
@@ -155,7 +155,7 @@
                                         This task was about using grid layout. It is cool to see that if the page is designed in a way that can be represented as a grid it is extremely easy to craft a nice layout with only a few classes.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex justify-content-evenly mb-3">
+                                <div class="col-12 d-flex gap-2 px-2 justify-content-evenly mb-3">
                                     <div class="work-link__page">
                                         <a href="works/grid(lesson 13)/grid.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
@@ -177,7 +177,7 @@
                                         In this task we were needed to build a documentation page according to figma mockup. This one was most fun because the page actually looks a bit like the real deal. The site included two pages, one with docs and a sticky table of contents and the other one with a bunch of companies using the product. The second one was cool to build with sass becasue it saved me a ton of time with its mixins.
                                     </p>
                                 </div>
-                                <div class="col-12 d-flex justify-content-evenly mb-3">
+                                <div class="col-12 d-flex gap-2 px-2 justify-content-evenly mb-3">
                                     <div class="work-link__page">
                                         <a href="works/konstrukt-big/Documentation.html"><button class="btn btn-secondary">Visit page</button></a>
                                     </div>
@@ -198,6 +198,6 @@
 <script type="text/javascript" src="myJS/latest-assignment.js"></script>
 <script>
     console.log('test alert')
-    console.log(lastPageInsert)
+    console.log(insertedPage)
 </script>
 </html>

@@ -25,3 +25,18 @@ var lastCodeInsert = lastCodeButton.innerHTML;
 //Insert it too
 document.getElementById("latest-assignment__page").innerHTML = lastPageInsert;
 document.getElementById("latest-assignment__code").innerHTML = lastCodeInsert;
+
+
+//Change color 
+var insertedPage = document.getElementById('latest-assignment__page');
+var insertedCode = document.getElementById('latest-assignment__code');
+
+function changeColor(){
+    insertedPage.querySelector('button').classList.remove('btn-secondary');
+    insertedPage.querySelector('button').classList.add('btn-primary');
+
+    insertedCode.querySelector('button').classList.remove('btn-secondary');
+    insertedCode.querySelector('button').classList.add('btn-primary');
+}
+
+changeColor();
