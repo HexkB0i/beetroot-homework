@@ -26,3 +26,10 @@ removeChapterList();
 
 // tests
 console.log(chapterList);
+
+// Dynamic viewport change with a listener
+let mw = window.matchMedia('(max-width: 400px)').matches;
+
+
+
+console.log(mw)
