@@ -1,0 +1,66 @@
+@import "colors-light";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 81.25vw;
+    margin: 0 auto;
+}
+
+.header{
+    @include flex(start, center);
+    border-bottom: 1px solid $border;
+}
+.logo{
+    @include flex();
+    gap: 13px;
+
+    font-family: Quicksand;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.main{
+    margin-top: 100px;
+}
+
+.content{
+    @include flex(start, space-between, column);
+    font-family: Roboto;
+
+    &-header{
+        height: 81px;
+        @include flex(start, space-between, column);
+
+        &__pale{
+            color: $text-color-pale;
+            font-size: 16px;
+            font-weight: 400;
+        };
+        &__big{
+            font-family: Nunito Sans;
+            font-size: 40px;
+            font-weight: 600;
+        };
+    }
+    &-cards{
+        @include flex(space-between, start, row);
+
+        &__item{
+            min-width: 370px;
+            min-height: 340px;
+            padding: 40px;
+            border: 1px solid $border;
+            border-radius: 8px;
+
+            @include flex(start, space-between, column);
+            gap: 30px;
+
+        };
+    }
+}
