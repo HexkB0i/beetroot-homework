@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+body, html {
+  padding: 0;
+}
+
 .container {
   width: 81.25vw;
   margin: 0 auto;
@@ -19,19 +23,22 @@
 .logo {
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   gap: 13px;
+}
+.logo__title {
   font-family: Quicksand;
   font-size: 35px;
   font-weight: 500;
 }
 
 .main {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .content {
+  padding-bottom: 87px;
   display: flex;
   justify-content: start;
   align-items: space-between;
@@ -56,15 +63,19 @@
   font-weight: 600;
 }
 .content-cards {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-direction: row;
+  gap: 30px;
 }
 .content-cards__item {
-  min-width: 370px;
-  min-height: 340px;
+  cursor: pointer;
+  min-width: 26vw;
+  min-height: 36vh;
   padding: 40px;
+  margin-bottom: 1.8vh;
   border: 1px solid #a6a5a5;
   border-radius: 8px;
   display: flex;
@@ -72,6 +83,81 @@
   align-items: space-between;
   flex-direction: column;
   gap: 30px;
+  transition: all 0.23s ease-in-out;
+}
+.content-cards__item__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #a6a5a5;
+  border-radius: 16px;
+}
+.content-cards__item__icon svg {
+  height: 40px;
+  width: 40px;
+}
+.content-cards__item__call2a {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3DB370;
+  text-decoration: none;
+}
+.content-cards__item:hover {
+  transform: scale(1.06);
+  border: 2px solid #3DB370;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+.content-cards__item:hover__call2a {
+  font-size: 20px;
+}
+
+.footer {
+  background-color: #16133D;
+  padding-bottom: 40px;
+}
+.footer .logo {
+  color: white;
+}
+.footer .container {
+  display: flex;
+  justify-content: start;
+  align-items: space-between;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-socials {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer-socials__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 38px;
+  height: 38px;
+  background-color: #efeef3;
+  border: none;
+  border-radius: 5px;
+}
+.footer-socials__icon svg {
+  height: 23px;
+  width: 23px;
+}
+.footer-socials__icon:hover {
+  cursor: pointer;
+}
+.footer-socials__icon:hover svg {
+  fill: #3DB370;
+  transition: 0.22s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
