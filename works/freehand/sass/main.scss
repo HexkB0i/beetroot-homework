@@ -98,20 +98,21 @@ body, html{
                 font-weight: 600;
                 color: $accent-green;
                 text-decoration: none;
+
+                transition: 0.22s;
+            }
+            &__call2a:hover{
+                color: $accent-green-dark;
             }
         }
         &__item:hover{
             transform: scale(1.06);
 
-            border: 2px solid $accent-green;
+            border: 1.3px solid $accent-green;
 
             box-sizing: border-box;
 
             margin-bottom: 0px;
-
-            &__call2a{
-                font-size: 20px;
-            }
         }
     }
 }

@@ -105,15 +105,16 @@ body, html {
   font-weight: 600;
   color: #3DB370;
   text-decoration: none;
+  transition: 0.22s;
+}
+.content-cards__item__call2a:hover {
+  color: #2f8855;
 }
 .content-cards__item:hover {
   transform: scale(1.06);
-  border: 2px solid #3DB370;
+  border: 1.3px solid #3DB370;
   box-sizing: border-box;
   margin-bottom: 0px;
-}
-.content-cards__item:hover__call2a {
-  font-size: 20px;
 }
 
 .footer {
