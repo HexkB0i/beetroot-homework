@@ -3,24 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create an Account</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main class="main">
-        <article class="block">
-            <h1>Create an Account</h1>
-            <form class="account-grid">
-                <section class="row">
-                    <div class="row-item__half">
-                        <label for="first-name">First Name</label>
-                        <input class="" type="text" name="first-name" id="first-name">
+        <div class="container">
+            <div class="form">
+                <h1 class="form__header">Create an account</h1>
+                <form action="">
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname">
+                        </div>
+                        <div class="row-half">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname">
+                        </div>
                     </div>
-                    <div class="row-item__half"></div>
-                </section>
-            </form>
-        </article>
-        <article class="block"></article>
+                    <div class="row">
+                        <div class="row-full">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="email">
+                            <span class="form-comment">We'll never share your email with anyone else.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-radio">
+                            <div class="row-radio__option">
+                                <input type="radio" name="gender" id="male">
+                                <label for="male">Male</label>
+
+                            </div>
+                            <div class="row-radio__option">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="country">Country</label>
+                            <select name="country" id="country">
+                                <option value="" disabled selected hidden>Select your option</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Monaco">Monaco</option>
+                            </select>
+                        </div>
+                        <div class="row-half">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-full">
+                            <button class="sign-up" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="conditions">
+                            By clicking the 'Sign Up' button, you confirm that you accept our <br> <a href="#">Terms of Use</a>
+                         and <a href="#">Privacy Policy</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="form">
+                <h1 class="form__header">Profile</h1>
+            </div>
+        </div>
     </main>
 </body>
 </html>

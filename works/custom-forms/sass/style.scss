@@ -1,0 +1,130 @@
+@import "mixins";
+@import "colors-light";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: $bg-color;
+}
+
+.container{
+    @include flex(center, center, row, 30px);
+
+    width: 81.25vw;
+    height: 84.3vh;
+
+    margin: 40px auto;
+
+    .form{
+        // min-width: 300px;
+        // max-width: 570px;
+        min-width: 570px;
+        min-height: 590px;
+
+        background-color: $form-color;
+
+        font-family: Roboto;
+
+        padding: 35px;
+
+        input{
+            width: 100%;
+            height: 38px;
+            
+            border: 1px solid $border;
+            border-radius: 6px;
+        
+            font-size: 20px;
+            font-family: Roboto;
+        }
+
+        select{
+            width: 100%;
+            height: 38px;
+            
+            background-color: $form-color;
+
+            border: 1px solid $border;
+            border-radius: 6px;
+        
+            font-size: 18px;
+            font-family: Roboto;
+        }
+        select:invalid{
+            color: red;
+        }
+
+        &__header{
+            font-size: 24px;
+            font-weight: 500;
+            color: $header-color;
+
+            margin-bottom: 20px;
+        }
+
+        form{
+            @include flex(center, center, column, 20px);
+            
+            .row{
+                width: 100%;
+
+                @include flex(space-between, start, row, 12px);
+
+                font-size: 15px;
+                font-weight: 400;
+                color: $text-color;
+                
+                &-half{
+                    @include flex(start, start, column, 12px);
+                    
+                    width: 50%; 
+                }
+                &-full{
+                    width: 100%;
+                    @include flex(start, start, column, 12px)
+
+                }
+                &-radio{
+                    @include flex(start, center, row, 20px);
+                    width: 100%;
+                    
+                    &__option{
+                        @include flex(start, center, row, 8px)
+                    }
+                }
+
+                .form-comment{
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: $pale-text;
+                }
+
+                .sign-up{
+                    width: 100%;
+                    height: 38px;
+                    
+                    border: none;
+                    border-radius: 6px;
+                    
+                    background-color: $accent-color;
+                    color: $form-color;
+
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                .conditions{
+                    text-align: center;
+                    font-size: 13px;
+                    font-weight: 400px;
+
+                    margin: 0 auto;
+
+                    a{}
+                }
+            }
+        }
+    }
+}
