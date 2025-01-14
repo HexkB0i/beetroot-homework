@@ -29,6 +29,14 @@ body, html{
         font-family: Roboto;
 
         padding: 35px;
+        
+        a{
+            text-decoration: none;
+            color: $accent-color;
+        }
+        a:hover{
+            color: $accent-active;
+        }
 
         input{
             width: 100%;
@@ -96,6 +104,36 @@ body, html{
                     }
                 }
 
+                &-pfp{
+                    @include flex(start, start, row, 10px);
+
+                    input{
+                        width: 35%;
+                    }
+
+                    .delete{
+                        height: 38px;
+                        width: 38px;
+                        
+                       &__icon{
+                        width: 23px;
+                        height: 23px;
+                       }
+                    }
+
+                    &__upload{
+                        @include flex(start, start, column, 10px);
+
+                        &__controls{
+                            @include flex(start, start, row, 10px);
+                        }
+                        
+                        &__comment{
+                            color: $pale-text;
+                        }
+                    }
+                }
+
                 .form-comment{
                     font-size: 13px;
                     font-weight: 400;
@@ -115,15 +153,52 @@ body, html{
                     font-size: 15px;
                     font-weight: 500;
                 }
+
+                .update{
+                    width: 150px;
+                    height: 38px;
+                    
+                    border: none;
+                    border-radius: 6px;
+                    
+                    background-color: $accent-color;
+                    color: $form-color;
+
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin-bottom: 81px;
+                }
+
                 .conditions{
                     text-align: center;
                     font-size: 13px;
                     font-weight: 400px;
 
                     margin: 0 auto;
-
-                    a{}
                 }
+
+            }
+            .preview{
+                width: 80px;
+                height: 80px;
+                border-radius: 50px;
+                margin-right: 10px;
+            }
+        }
+
+        &-footer{
+            width: 100%;
+            
+            margin-bottom: -19px;
+            padding-top: 20px;
+
+            @include flex(center, center, row, 20px);
+
+            border-top: 1px solid $border;
+
+            span{
+                font-weight: 400;
+                color: $text-color;
             }
         }
     }
