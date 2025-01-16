@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="form">
+                <h1 class="form__header">Create an account</h1>
+                <form action="#######">
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname">
+                        </div>
+                        <div class="row-half">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-full">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="email">
+                            <span class="form-comment">We'll never share your email with anyone else.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-radio">
+                            <label class="custom-radio">
+                                <input type="radio" name="gender" id="male">
+                                <span></span>
+                                <label class="custom-radio__label" for="male">Male</label>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="gender" id="female">
+                                <span></span>
+                                <label class="custom-radio__label" for="female">Female</label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="country">Country</label>
+                            <select name="country" id="country">
+                                <option value="" disabled selected hidden>Select your option</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Monaco">Monaco</option>
+                            </select>
+                        </div>
+                        <div class="row-half">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-full">
+                            <button class="sign-up" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="conditions">
+                            By clicking the 'Sign Up' button, you confirm that you accept our <br> <a href="#">Terms of Use</a>
+                         and <a href="#">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <div class="form-footer">
+                        <span>Have an account</span>
+                        <a href="#">Log In</a>
+                    </div>
+                </form>
+            </div>
+            <div class="form">
+                <h1 class="form__header">Profile</h1>
+                <form action="######">
+                    <div class="row">
+                        <div class="row-pfp">
+                            <img class="preview" src="assets/images/preview.png" alt="">
+                            <div class="row-pfp__upload">
+                                <div class="row-pfp__upload__controls">
+                                    <input type="file" id="pfp">
+                                    <button class="delete" type="button">
+                                        <embed class="delete__icon" src="assets/images/Trash.svg" type="">
+                                    </button>
+                                </div>
+                                <div class="row-pfp__upload__comment">
+                                    <span>
+                                        Up to 1 MB (300x300 px)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="p-fname">First Name</label>
+                            <input type="text" name="p-fname" id="p-fname">
+                        </div>
+                        <div class="row-half">
+                            <label for="p-lname">First Name</label>
+                            <input type="text" name="p-lname" id="p-lname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="p-country">Country</label>
+                            <select name="p-country" id="p-country">
+                                <option value="" disabled selected hidden>Select your option</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Monaco">Monaco</option>
+                            </select>
+                        </div>
+                        <div class="row-half">
+                            <label for="p-city">City</label>
+                            <input type="text" name="p-city" id="p-city">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row-half">
+                            <label for="zip-code">Zip Code</label>
+                            <input type="text" name="zip-code" id="zip-code">
+                        </div>
+                        <div class="row-half">
+                            <label for="phone-n">Phone Number</label>
+                            <input type="text" name="pnone-n" id="phone-n">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="update">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
