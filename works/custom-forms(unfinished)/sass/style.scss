@@ -103,8 +103,8 @@ body, html{
                         opacity: 0; 
                         position: absolute;
                     }
-                    input[type=radio]:checked{
-
+                    input[type="radio"]:checked ~ span::after {
+                        opacity: 1;
                     }
 
                     .custom-radio{
