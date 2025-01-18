@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+ul,
+ol,
+dl {
+  padding-left: 0;
+  margin: 0 0;
+  list-style: none;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: #565656;
+  min-height: 100vh;
+}
+
+.header,
+.banner,
+.blog,
+.footer {
+  padding: 0 calc(50vw - 585px);
+}
+@media screen and (max-width: 1200px) {
+  .header,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 calc(50vw - (585px - 12%));
+  }
+}
+@media screen and (max-width: 992px) {
+  .header,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 calc(50vw - (585px - 26.8%));
+  }
+}
+@media screen and (max-width: 768px) {
+  .header,
+  .banner,
+  .blog,
+  .footer {
+    padding: 0 15px;
+  }
+}
+
+.blog {
+  padding-top: 90px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  gap: 10px;
+}
+@media screen and (max-width: 992px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+.header .nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .header .nav {
+    flex-grow: 0;
+    order: 2;
+  }
+}
+.header .search {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  gap: 2.3vw;
+  padding: 0 30px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.menu-link {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+}
+.menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: -14px;
+  transform: translateX(10%);
+  width: 0;
+  height: 1px;
+  opacity: 0;
+  background: #000;
+  transition: all 0.55s;
+}
+.menu-link:hover::after {
+  left: 0;
+  transform: translateX(12%);
+  width: 76%;
+  opacity: 1;
+}
+@media screen and (max-width: 992px) {
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 130px;
+    width: 340px;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    z-index: 2;
+    padding: 0 0;
+    background-color: #8c9ffd;
+  }
+  .menu-item {
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8039215686);
+    padding: 10px 0;
+  }
+}
+
+.burger {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .burger:checked ~ .menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  .burger:checked ~ .burger-img {
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in-out;
+  }
+  .burger:checked ~ .burger-img::before {
+    opacity: 0;
+  }
+  .burger:checked ~ .burger-img::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+}
+.burger-img {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .burger-img {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    background-color: #000;
+    height: 2px;
+    width: 34px;
+  }
+  .burger-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+  }
+  .burger-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    top: -10px;
+  }
+}
+
+.banner {
+  background: url("../assets/img/bg-image.png") no-repeat;
+  background-size: cover;
+  min-height: calc(85vh - 100px);
+  max-height: 600px;
+  padding-top: 100px;
+}
+@media screen and (min-width: 1580px) {
+  .banner {
+    background-position-y: 37%;
+  }
+}
+.banner-title {
+  font-family: "Red Hat Display", serif;
+  font-size: 3rem;
+  color: #000;
+  line-height: 1.33;
+  max-width: 700px;
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.content-block .content-half {
+  width: 50%;
+  height: 470px;
+}
+.content-block .content-img {
+  width: 30%;
+}
+.content-block .content-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7b7b7b;
+  display: flex;
+  flex-direction: column;
+  padding-top: 85px;
+  max-width: 450px;
+}
+.content-block .content-text .text-heading {
+  font-family: "Red Hat Display";
+  font-size: 23px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.content-block .content-text .text-main {
+  color: #565656;
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
