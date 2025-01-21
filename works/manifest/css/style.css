@@ -26,14 +26,18 @@ body {
 
 .header,
 .banner,
-.blog,
+.blog-title,
+.content-block,
+.section-title,
 .footer {
   padding: 0 calc(50vw - 585px);
 }
 @media screen and (max-width: 1200px) {
   .header,
   .banner,
-  .blog,
+  .blog-title,
+  .content-block,
+  .section-title,
   .footer {
     padding: 0 calc(50vw - (585px - 12%));
   }
@@ -41,7 +45,9 @@ body {
 @media screen and (max-width: 992px) {
   .header,
   .banner,
-  .blog,
+  .blog-title,
+  .content-block,
+  .section-title,
   .footer {
     padding: 0 calc(50vw - (585px - 26.8%));
   }
@@ -49,7 +55,9 @@ body {
 @media screen and (max-width: 768px) {
   .header,
   .banner,
-  .blog,
+  .blog-title,
+  .content-block,
+  .section-title,
   .footer {
     padding: 0 15px;
   }
@@ -57,6 +65,16 @@ body {
 
 .blog {
   padding-top: 90px;
+}
+.blog-title {
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 400;
+  font-family: "Red Hat Display";
+}
+.blog .text-main .arrow {
+  font-size: 16px;
+  padding-left: 6px;
 }
 
 .header {
@@ -214,28 +232,139 @@ body {
   max-width: 700px;
 }
 
+.section-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.section-title h1 {
+  font-family: "Red Hat Display";
+  font-weight: 600;
+  font-size: 28px;
+}
+.section-title a {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 16px;
+  color: #7b7b7b;
+  text-decoration: none;
+}
+
 .content-block {
   display: flex;
   align-items: center;
-  gap: 5%;
+  gap: 3%;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.content-block:has(.content-portion) {
+  align-items: start;
+}
+@media screen and (max-width: 768px) {
+  .content-block:has(.content-portion) {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.content-block:has(.column) {
+  align-items: start;
+}
+.content-block:has(.sub) {
+  justify-content: space-between;
+}
+.content-block:has(.sub) .content-half {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .content-block:has(.sub) {
+    flex-direction: column;
+  }
+  .content-block:has(.sub) .content-half {
+    width: 100%;
+  }
+  .content-block:has(.sub) .sub-paragraph {
+    align-items: end;
+  }
+  .content-block:has(.sub) .sub-paragraph p {
+    text-align: end;
+  }
 }
 .content-block .content-half {
+  display: flex;
+  align-items: start;
   width: 50%;
-  height: 470px;
 }
-.content-block .content-img {
+.content-block .content-portion {
   width: 30%;
+  display: flex;
+  flex-direction: column;
 }
-.content-block .content-text {
+@media screen and (max-width: 768px) {
+  .content-block .content-portion {
+    width: 100%;
+    flex-direction: row;
+    gap: 5%;
+    align-items: start;
+  }
+  .content-block .content-portion:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  .content-block .content-portion .portion-img__caption {
+    padding: 0;
+  }
+}
+.content-block .portion-img {
+  display: flex;
+  height: fit-content;
+}
+.content-block .portion-img__image {
+  object-fit: contain;
+  object-position: top center;
+  height: 100%;
+  width: 100%;
+}
+.content-block .portion-img__caption {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 25px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.content-block .portion-title {
+  font-family: "Red Hat Display";
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+.content-block .portion-text {
+  justify-content: start;
+}
+
+.content-image {
+  object-fit: contain;
+  height: auto;
+  width: 100%;
+}
+
+.content-text {
   font-size: 16px;
   font-weight: 400;
   color: #7b7b7b;
   display: flex;
   flex-direction: column;
-  padding-top: 85px;
-  max-width: 450px;
+  max-width: 380px;
 }
-.content-block .content-text .text-heading {
+@media screen and (max-width: 995px) {
+  .content-text {
+    padding-top: 0px;
+  }
+}
+.content-text .text-heading {
   font-family: "Red Hat Display";
   font-size: 23px;
   font-weight: 500;
@@ -243,9 +372,65 @@ body {
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.content-block .content-text .text-main {
+@media screen and (max-width: 715px) {
+  .content-text .text-heading {
+    margin-top: 3vw;
+    margin-bottom: 1.5vw;
+  }
+}
+.content-text .text-main {
   color: #565656;
   margin-top: 50px;
+}
+@media screen and (max-width: 715px) {
+  .content-text .text-main {
+    margin-top: 3vw;
+  }
+}
+
+.load-more__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.load-more {
+  width: 180px;
+  height: 46px;
+  background-color: #565656;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Lato;
+  border: none;
+  cursor: pointer;
+}
+
+.sub-header {
+  font-family: "Red Hat Display";
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.image-left {
+  justify-content: start;
+}
+
+.image-right {
+  justify-content: end;
+}
+
+.text-left {
+  justify-content: end;
+}
+
+.text-right {
+  justify-content: start;
+}
+
+.column {
+  flex-direction: column;
+  align-items: start;
 }
 
 /*# sourceMappingURL=style.css.map */
