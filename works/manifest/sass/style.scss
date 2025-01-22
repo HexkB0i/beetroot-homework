@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @import 'vars';
+@import 'mixins';
 
 * {
     box-sizing: border-box;
@@ -24,8 +25,7 @@ body {
 .banner,
 .blog-title,
 .content-block,
-.section-title,
-.footer{
+.section-title{
     padding: 0 calc(50vw - $adaptive_width_container);    @media screen and (max-width: 1200px) {
         padding: 0 calc(50vw - calc($adaptive_width_container - 12%));
     }    @media screen and (max-width: 992px) {
@@ -278,14 +278,36 @@ body {
 
                 p{
                     text-align: end;
+                    font-size: 19px;
                 }
             }
+        }
+    }
+    &:has(.socials){
+        align-items: center;
+        margin-bottom: 0;
+
+        @media screen and (max-width:768px) {
+            .content-half{
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+
+            .socials{
+                margin-bottom: 40px;
+            }
+
+            .copyright{
+                padding-bottom: 50px;
+            }
+
         }
     }
 
     .content-half{
         display: flex;
-        align-items: start;
+        align-items: stretch;
         width: 50%;
     }
 
@@ -418,6 +440,90 @@ body {
         font-size: 23px;
         font-weight: 400;
     }
+
+    .footer-heading{
+        font-size: 48px;
+        font-family: "Red Hat Display";
+        font-weight: 400;
+    }
+}
+
+.footer{
+    background-color: $footer-bg-color;
+    padding-bottom: 10px;
+
+    .content-block{
+        padding-bottom: 0;
+    }
+
+    h1{
+        color: #000;
+    }
+    span{
+        color: #000;
+        padding-bottom: 15px;
+        font-weight: 400;
+    }
+
+    .socials{
+        display: flex;
+        gap: 23px;
+
+        &-item{
+            border: 1px solid $font_color_add;
+
+            transition: 0.5s;
+
+            cursor: pointer;
+        }
+
+        .instagram{
+            @include social;
+            background-image: url("../assets/img/icons/instagram-icon.svg");
+
+            &:hover{
+                @include social-hover;
+                background-image: url("../assets/img/icons/instagram-icon-white.svg");
+            }
+        }
+        .facebook{
+            @include social;
+            background-image: url("../assets/img/icons/facebook-icon.svg");
+            
+            &:hover{
+                @include social-hover;
+                background-image: url("../assets/img/icons/facebook-icon-white.svg");
+            }
+        }
+        .twitter{
+            @include social;
+            background-image: url("../assets/img/icons/twitter-icon.svg");
+
+            &:hover{
+                @include social-hover;
+                background-image: url("../assets/img/icons/twitter-icon-white.svg");
+            }
+        }
+        .linkedin{
+            @include social;
+            background-image: url("../assets/img/icons/linkedin-icon.svg");
+            
+            &:hover{
+                @include social-hover;
+                background-image: url("../assets/img/icons/linkedin-icon-white.svg");
+            }
+        }
+    }
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+}
+#copyright{
+    color: #000;
+    font-weight: 400;
+    font-size: 12px;
+
 }
 
 .image-left{
