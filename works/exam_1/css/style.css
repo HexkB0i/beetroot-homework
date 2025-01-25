@@ -379,4 +379,28 @@ h2 {
   transition: 0.2s;
 }
 
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid #E4E4E4;
+}
+.copyright-text {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 14px;
+}
+.copyright a {
+  font-family: Lato;
+  text-decoration: none;
+  font-weight: normal;
+  color: #262A3F;
+}
+.copyright-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 /*# sourceMappingURL=style.css.map */

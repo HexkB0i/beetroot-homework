@@ -477,5 +477,34 @@ h2{
     }
 }
 
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    border-top: 1px solid $pale;
+
+
+    &-text{
+        font-family: Lato;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    a{
+        font-family: Lato;
+        text-decoration: none;
+        font-weight: normal;
+        color: $text;
+    }
+
+    &-links{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
 
 
