@@ -33,6 +33,10 @@ body, html{
         justify-content: space-between;
         align-items: center;
     }
+
+    @media screen and (max-width:950px) {
+        width: 95vw;
+    }
 }
 
 h2{
@@ -95,7 +99,7 @@ h2{
     padding-top: 30px;
 
     width: 100vw;
-    height: 100vh;
+    height: 850px;
 
     .nav{
         display: flex;
@@ -149,6 +153,7 @@ h2{
     }
     &-intro{
         padding-top: 150px;
+        padding-bottom: 200px;
 
         .pitch{
             width: 523px;
@@ -160,10 +165,11 @@ h2{
 }
 
 .info{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -21%;
+    margin-top: -10%;
 
     &-image{
         img{
@@ -239,6 +245,31 @@ h2{
             margin-left: -32%;
         }
     }
+    @media screen and (max-width:950px) {
+        margin-top: 0;
+
+        width: 100vw;
+        align-items: start;
+        justify-content: center;
+        
+        &-image{
+            position: absolute;
+            right: 32px;
+        }
+        &-text{
+            position: absolute;
+            right: 32px;
+            height: 670px;
+            width: 100vw;
+
+            margin-left: -33vw;
+        }
+    }
+    @media screen and (max-width:915px) {
+        &-image{
+            right: 50px;
+        }
+    }
 }
 
 .benefits{
@@ -257,9 +288,13 @@ h2{
     }
 
     &-cell{
-        padding: 50px 35px 112px 35px;
+        padding: 50px 35px 50px 35px;
 
         border-top: 1px solid $pale;
+    }
+
+    @media screen and (max-width:950px) {
+        margin-top: 850px;
     }
 }
 
@@ -296,6 +331,11 @@ h2{
         top: 65px;
         left: 100px;
     }
+    @media screen and (max-width:970px) {
+        p{
+            font-size: 28px;
+        }
+    }
 }
 
 .video{
@@ -306,26 +346,40 @@ h2{
 
     width: 970px;
     margin: 0 auto;
-    padding: 4% 7% 4% 4%;
+    padding: 3% 7% 3% 3%;
 
     &-player{
-        display: block;
-        content: '';
         border-radius: 9px;
-        background-color: rgb(182, 37, 37);
         
         width: 100%;
         height: 100%;
     
         position: relative;
     }
+    @media screen and (max-width:1200px) {
+        height: 45vw;
+        width: auto;
+
+        padding: 0;
+        background-image: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-player{
+            width: 90%;
+            height: 100%;
+        }
+    }
 }
 .api-info{
-    width: 970px;
+    width: 100%;
     margin: 0 auto 120px;
 }
 
 .features{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,6 +437,14 @@ h2{
             margin-left: -30%;
         }
     }
+    @media screen and (max-width:900px) {
+        align-items: center;
+        justify-content: c;
+        &-grid{
+            margin-left: -100%;
+        }
+    }
+
 }
 
 .reviews{
@@ -431,6 +493,20 @@ h2{
         }
         #Mooney{
             background-image: url(../assets/img/bg-review3.png);
+        }
+    }
+    @media screen and (max-width:1200px) {
+        &-block{
+            flex-wrap: wrap;
+        }
+    }
+    @media screen and (max-width:946px) {
+        &-info{
+            text-align: center;
+        }
+
+        &-block__item{
+            width: 70vw;
         }
     }
 }
@@ -507,6 +583,14 @@ h2{
             }
         }
     }
+
+    @media screen and (max-width:1200px) {
+        .contact{
+            justify-content: center;
+            gap: 50px;         
+            flex-wrap: wrap;
+        }
+    }
 }
 
 .copyright{
@@ -521,7 +605,7 @@ h2{
     &-text{
         font-family: Lato;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 1vw;
     }
 
     a{
@@ -529,6 +613,7 @@ h2{
         text-decoration: none;
         font-weight: normal;
         color: $text;
+        font-size: 1.2vw;
     }
 
     &-links{
@@ -536,6 +621,8 @@ h2{
         align-items: center;
         gap: 32px;
     }
+
+
 }
 
 
