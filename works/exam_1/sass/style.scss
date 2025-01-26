@@ -85,7 +85,6 @@ h2{
     }
 }
 
-// Header
 .header{
     background-image: url('../assets/img/First-Screen-Bg-Image.png');
     background-size: cover;
@@ -162,8 +161,9 @@ h2{
 
 .info{
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: -220px;
+    margin-top: -21%;
 
     &-image{
         img{
@@ -172,9 +172,9 @@ h2{
     }
 
     &-text{
+        position: relative;
         display: flex;
-        justify-content: space-around;
-        margin-left: -170px;
+        margin-left: -21%;
         background-color: rgb(255, 255, 255, 0.9);
 
         padding: 50px 15px;
@@ -189,7 +189,9 @@ h2{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 300px;
+                width: 100%;
+
+                text-align: center;
 
                 h2{
                     font-size: 68px;
@@ -200,6 +202,12 @@ h2{
                 .usd-sign{
                     color: $usd-color;
                     font-size: 40px;
+                }
+
+                @media screen and (max-width:1400px) {
+                    h2{
+                        font-size: 50px;
+                    }
                 }
     
             }
@@ -224,6 +232,11 @@ h2{
             .btn{
                 margin-top: 50px;
             }
+        }
+    }
+    @media screen and (max-width:1200px) {
+        &-text{
+            margin-left: -32%;
         }
     }
 }
@@ -253,7 +266,7 @@ h2{
 .quote{
     margin: 0 auto;
     position: relative;
-    width: 1170px;
+    width: 81.25vw;
     height: 400px;
     background-image: url(../assets/img/quote-background.png);
 
@@ -293,16 +306,18 @@ h2{
 
     width: 970px;
     margin: 0 auto;
+    padding: 4% 7% 4% 4%;
 
     &-player{
         display: block;
         content: '';
         border-radius: 9px;
         background-color: rgb(182, 37, 37);
+        
+        width: 100%;
+        height: 100%;
     
         position: relative;
-        top: 30px;
-        left: 30px;
     }
 }
 .api-info{
@@ -312,16 +327,24 @@ h2{
 
 .features{
     display: flex;
+    justify-content: center;
     align-items: center;
+
+    &-image{
+        height: 100%;
+        width: auto;
+
+        object-fit: cover;
+    }
 
     &-grid{
         width: 770px;
-        height: 450px;
-        margin-left: -200px;
+        height: auto;
+        margin-left: -18%;
         padding: 76px 70px;
 
         display: grid;
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr); 
         grid-template-rows: 1fr 1fr; 
         gap: 70px 100px; 
         grid-template-areas: 
@@ -331,21 +354,22 @@ h2{
         background-color: rgb(255, 255, 255, 0.7);
 
         &__cell{
+
             h2{
                 font-size: 24px;
                 margin-top: 0;
             }
             .btn{
-                width: 300px;
-                height: 90px;
-                padding: 33px 89px;
+                width: 90%;
+                height: 65px;
+                padding: 4% 5%;
 
                 border: 1px solid $pale;
 
                 &::after{
-                    bottom: 29px;
-                    right: 85px;
-                    width: 37%;
+                    bottom: 30%;
+                    right: 15%;
+                    width: 50%;
                 }
 
                 &:hover{
@@ -354,26 +378,34 @@ h2{
             }
         }
     }
+    @media screen and (max-width:1200px) {
+        &-grid{
+            margin-left: -30%;
+        }
+    }
 }
 
 .reviews{
+    width: 81.25vw;
+    margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 100px;
 
     border-bottom: 1px solid $pale;
 
     &-block{
-        padding-top: 50px;
-
         display: flex;
+        justify-content: center;
         gap: 30px;
+
+        padding-top: 50px;
 
         &__item{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            height: 340px;
+            height: auto;
             width: 370px;
 
             padding: 30px 40px;
