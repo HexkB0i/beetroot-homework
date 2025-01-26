@@ -35,7 +35,11 @@ body, html{
     }
 
     @media screen and (max-width:950px) {
-        width: 95vw;
+        width: 85vw;
+
+        &-menu{
+            width: 81.25vw;
+        }
     }
 }
 
@@ -128,6 +132,7 @@ h2{
             }
 
             &-item{
+                transition: 0.25s;
                 &::after{
                     position: relative;
                     display: block;
@@ -149,6 +154,23 @@ h2{
                     left: 0;
                 }
             }
+
+            .burger{
+                height: 4px;
+                width: 5vw;
+                background: $text;
+                position: absolute;
+                right: 50px;
+
+                &::before{
+                    height: 4px;
+                    width: 5vw;
+                    background: $text;
+                    position: absolute;
+                    right: 50px;
+                    bottom: 30px;
+                }
+            }
         }
     }
     &-intro{
@@ -160,6 +182,39 @@ h2{
         }
         .btn{
             margin-top: 50px;
+        }
+    }
+
+    @media screen and (max-width:790px) {
+        .menu{
+            flex-direction: column;
+
+            padding: 0;
+
+            position: absolute;
+            right: 70px;
+            top: 70px;
+
+            background-color: $dropdown-backdrop;
+
+            &-item{
+                width: 250px;
+                height: 50px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 18px;
+
+                &:hover::after{
+                    display: none;
+                }              
+                
+                &:active{
+                    background-color: $pale;
+                }
+            }
         }
     }
 }
@@ -279,9 +334,6 @@ h2{
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr; 
     gap: 30px 30px; 
-    grid-template-areas: 
-      ". ."
-      ". ."; 
     
     h2{
         font-size: 40px;
@@ -296,6 +348,10 @@ h2{
     @media screen and (max-width:950px) {
         margin-top: 850px;
     }
+    @media screen and (max-width:810px) {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .quote{
@@ -304,8 +360,9 @@ h2{
     width: 81.25vw;
     height: 400px;
     background-image: url(../assets/img/quote-background.png);
+    z-index: -2;
 
-    padding: 100px 160px;
+    padding: 9% 14%;
     margin-bottom: 120px;
 
     p{
@@ -330,8 +387,9 @@ h2{
         position: absolute;
         top: 65px;
         left: 100px;
+        z-index: -1;
     }
-    @media screen and (max-width:970px) {
+    @media screen and (max-width:1000px) {
         p{
             font-size: 28px;
         }
@@ -392,9 +450,9 @@ h2{
     }
 
     &-grid{
-        width: 770px;
+        width: 60vw;
         height: auto;
-        margin-left: -18%;
+        margin-left: -18vw;
         padding: 76px 70px;
 
         display: grid;
@@ -434,14 +492,22 @@ h2{
     }
     @media screen and (max-width:1200px) {
         &-grid{
-            margin-left: -30%;
+            margin-left: -35%;
         }
     }
     @media screen and (max-width:900px) {
         align-items: center;
-        justify-content: c;
+        justify-content: space-around;
+
+        &-image{
+            display: none;
+        }
         &-grid{
-            margin-left: -100%;
+            background-image: url('../assets/img/features-background-image.png');
+            background-color: rgba(255,255,255,0.7);
+            background-blend-mode: lighten;
+            margin: 0 auto;
+            width: 100vw;
         }
     }
 
