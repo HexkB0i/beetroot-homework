@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'keyframes';
 
+
 // Fonts
 
 // Lato
@@ -14,7 +15,7 @@
     box-sizing: border-box;
 }
 body, html{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -22,7 +23,7 @@ body, html{
     scroll-behavior: smooth;
 
     background-color: $body-color;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
 }
 
@@ -115,6 +116,7 @@ h2{
     height: 850px;
 
     .nav{
+        position: relative;
         display: flex;
         align-items: center;
 
@@ -124,6 +126,8 @@ h2{
         background-color: rgb(255, 255, 255, 0.4);
         
         backdrop-filter: blur(5px);
+
+        z-index: 2;
 
         .burger{
             visibility: hidden;
@@ -192,6 +196,8 @@ h2{
             font-family: Lato;
             font-size: 14px;
             letter-spacing: 1px;
+            
+            z-index: +3;
 
             transition: 0.3s;
 
@@ -206,7 +212,7 @@ h2{
                     position: relative;
                     display: block;
                     content: "";
-                    background-color: $menu-after;
+                    background-color: $body-color;
                     height: 2px;
                     width: 0;
                     bottom: -5px;
@@ -218,6 +224,7 @@ h2{
             }
             &-item:hover{
                 &::after{
+                    background-color: $menu-after;
                     width: 100%;
                     opacity: 0.6;
                     left: 0;
@@ -265,6 +272,8 @@ h2{
         padding-top: 150px;
         padding-bottom: 200px;
 
+        z-index: 0;
+
         .pitch{
             width: 523px;
         }
@@ -299,6 +308,10 @@ h2{
     justify-content: center;
     align-items: center;
     margin-top: -10%;
+
+    .btn{
+        width: 180px;
+    }
 
     &-image{
         img{
@@ -367,10 +380,9 @@ h2{
             p:nth-of-type(2){
                 padding-top: 40px;
             }
-
-            .btn{
-                margin-top: 50px;
-            }
+        }
+        .btn{
+            margin-top: 50px;
         }
     }
     @media screen and (max-width:1200px) {
@@ -381,7 +393,7 @@ h2{
     @media screen and (max-width:950px) {
         margin-top: -150px;
 
-        width: 100vw;
+        width: 90vw;
         align-items: start;
         justify-content: center;
         
@@ -404,30 +416,27 @@ h2{
         }
     }
     @media screen and (max-width:780px) {
-        background-image: url('../assets/img/statistic-image.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: rgba(255,255,255,0.7);
-        background-blend-mode: lighten;
-
         &-image{
             display: none;
         }
 
         &-text{
             flex-direction: column;
+            align-items: center;
+
 
             position: absolute;
-            left: 27%;
+            left: 28%;
             top: 0;
 
             padding-right: 10%;
 
             &__numbers{
-                margin-right: 10%;
+                margin-right: 2%;
                 width: 100%;
                 flex-direction: row;
                 justify-content: space-around;
+                gap: 0px;
 
                 .stat-fig{
                     
@@ -444,7 +453,7 @@ h2{
                 }
 
                 .stat-line{
-                    display: none;
+                    visibility: hidden;
                 }
             }
             &__p{
@@ -470,7 +479,7 @@ h2{
         }
 
         &-text__p{
-            padding-top: 100px;
+            margin-top: 150px;
         }
     }
     @media screen and (max-width:583px) {
@@ -479,8 +488,38 @@ h2{
         }
     }
     @media screen and (max-width:500px) {
+        .info-text{
+            background-color: $body-color;
+        }
+
+        .info-text__numbers{
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .stat-line{
+                visibility: visible;
+            }
+
+            .stat-fig{
+                h2{
+                    font-size: 7vw;
+
+                    .usd-sign{
+                        font-size: 7vw;
+                    }
+                }
+                span{
+                    font-size: 4vw;
+                }
+            }
+        }
+
         &-text{
             left: 33%;
+
+            &__p{
+                margin-top: 500px;
+            }
         }
     }
     @media screen and (max-width:450px) {
@@ -510,8 +549,17 @@ h2{
     }
 
     @media screen and (max-width:950px) {
-        margin-top: 850px;
+        margin-top: 700px;
     }
+
+    @media screen and (max-width:584px) {
+        margin-top: 800px;
+    }
+
+    @media screen and (max-width:500px) {
+        margin-top: 1100px;
+    }
+
     @media screen and (max-width:810px) {
         grid-template-columns: 1fr; 
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -573,6 +621,11 @@ h2{
             font-size: 16px;
         }
     }
+    @media screen and (max-width:385px) {
+        p{
+            line-height: 36px;
+        }
+    }
 }
 
 .video{
@@ -584,6 +637,10 @@ h2{
     width: 970px;
     margin: 0 auto;
     padding: 3% 7% 3% 3%;
+
+    iframe{
+        border: none;
+    }
 
     &-player{
         border-radius: 9px;
@@ -609,10 +666,31 @@ h2{
             height: 100%;
         }
     }
+    @media screen and (max-width:1200px) {
+        &-player{
+            height: 50vw;
+
+        }
+    }
 }
 .api-info{
     width: 100%;
     margin: 0 auto 120px;
+    
+    @media screen and (max-width:1200px) {
+        margin-top: 80px;
+    }
+
+    @media screen and (max-width:500px) {
+        h2{
+            font-size: 5vw;
+            margin: 20px 10px;
+        }
+        p{
+            font-size: 3vw;
+            margin: 20px 10px;
+        }
+    }
 }
 
 .features{
@@ -692,19 +770,19 @@ h2{
     }
     @media screen and (max-width:491px) {
         width: 100vw;
-        
-    }
-    &-grid{
-        display: grid;
-        grid-template-columns: minmax(150px, 1fr); 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-        gap: 70px 100px;
-        grid-template-areas:
-            '.'
-            '.'
-            '.'
-            '.'
-        ;
+     
+        &-grid{
+            display: grid;
+            grid-template-columns: minmax(150px, 1fr); 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+            gap: 70px 100px;
+            grid-template-areas:
+                '.'
+                '.'
+                '.'
+                '.'
+            ;
+        }
     }
 }
 
@@ -771,6 +849,16 @@ h2{
             width: 70vw;
         }
     }
+    @media screen and (max-width:946px) {
+        &-block{
+            width: 100%;
+            
+            &__item{
+                width: 100%;
+            }
+        }
+    }
+
 }
 
 .footer{
@@ -843,6 +931,11 @@ h2{
 
                 transition: 0.2s;
             }
+
+            .btn{
+                justify-self: center;
+                width: 170px
+            }
         }
     }
 
@@ -850,7 +943,35 @@ h2{
         .contact{
             justify-content: center;
             gap: 50px;         
+
+        }
+    }
+
+    @media screen and (max-width:1130px) {
+        .contact{
             flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .contact-info{
+            justify-content: center;
+            width: 300px;
+
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        .contact{
+            &-form{
+                align-items: center;
+                input, textarea{
+                    width: 300px;
+                }
+            }
         }
     }
 }
