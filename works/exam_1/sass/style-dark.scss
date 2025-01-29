@@ -1,4 +1,4 @@
-@import "colors-light";
+@import "colors-dark";
 @import 'mixins';
 @import 'keyframes';
 
@@ -117,16 +117,16 @@ h2{
     transition: 0.3s;
 
     &:hover{
-        background-color: rgba(81, 87, 115, 0.6);
+        background-color: rgb(255, 255, 255, 0.4);
 
         :first-child{
-            fill: white;
+            fill: black;
         }
     }
 }
 
 .header{
-    background-image: url('../assets/img/First-Screen-Bg-Image.png');
+    background-image: url('../assets/img/first-screen-image-dark.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -242,7 +242,10 @@ h2{
                     left: 50%;
                     opacity: 0;
 
-                    transition: 0.25s;                    
+                    transition: 0.25s;
+                }
+                &:has(.theme-switch)::after{
+                    display: none;
                 }
             }
             &-item:hover{
@@ -251,9 +254,6 @@ h2{
                     width: 100%;
                     opacity: 0.6;
                     left: 0;
-                }
-                &:has(.theme-switch)::after{
-                    display: none;
                 }
             }
             @media screen and (max-width:790px) {
@@ -1015,6 +1015,7 @@ h2{
         font-family: Lato;
         font-weight: 300;
         font-size: 1vw;
+        color: $text-light;
     }
 
     a{
@@ -1023,7 +1024,6 @@ h2{
         font-weight: normal;
         color: $text;
         font-size: 1.2vw;
-        color: $text-light;
     }
 
     &-links{
@@ -1031,9 +1031,4 @@ h2{
         align-items: center;
         gap: 32px;
     }
-
-
 }
-
-
-
