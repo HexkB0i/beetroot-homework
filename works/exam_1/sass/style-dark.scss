@@ -424,16 +424,22 @@ h2{
             margin-left: -32%;
         }
     }    
+    @media screen and (max-width:950px) {
+        display: none;
+    }   
 }
 
 .info-950px{
     background-image: url('../assets/img/statistic-image.png');
     background-repeat: no-repeat;
     background-color: $section-backdrop;
-    background-blend-mode: lighten;
+    background-blend-mode: darken;
     background-size: cover;
 
-    display: flex;
+    display: none;
+    @media screen and (max-width:950px) {
+        display: flex;
+    }
     flex-direction: column;
     justify-content: center;
     align-items: center;
