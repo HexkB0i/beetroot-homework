@@ -67,7 +67,7 @@ h2{
 
 .main-text{
     font-family: Lato;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 300;
     color: $text;
 }
@@ -654,11 +654,11 @@ h2{
 
     @media screen and (max-width:500px) {
         h2{
-            font-size: 5vw;
+            font-size: 8vw;
             margin: 20px 10px;
         }
         p{
-            font-size: 3vw;
+            font-size: 5vw;
             margin: 20px 10px;
         }
     }
