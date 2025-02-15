@@ -74,4 +74,5 @@ let reverseNum = straightNumArray.reverse().join('');
 console.log()
 console.log(reverseNum);
 
-
+let a =  0.2 + 0.1;
+console.log(a)
