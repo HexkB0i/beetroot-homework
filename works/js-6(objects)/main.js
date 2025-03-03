@@ -1,5 +1,3 @@
-// Minimum
-//
 // 1) Auto object 
 
 const auto= {
@@ -66,4 +64,70 @@ const auto= {
 };
 
 auto.info()
+
+
+// 2) Time display object
+
+let dateTime = new Date();
+
+const adjustableTime = {
+    hours: dateTime.getHours(),
+    minutes: dateTime.getMinutes(),
+    seconds: dateTime.getSeconds(),
+    
+    printTime: function(){
+        console.log(`Time right now is ${this.hours}:${this.minutes}:${this.seconds}`)
+        return `${this.hours}:${this.minutes}:${this.seconds}`
+    },
+
+    // operation takes a number. 1 for adding, 0 for subtracting
+    changeTime: function(addHour, addMinute, addSecond, operation){
+       console.log(`Unadjusted time is: ${this.hours}:${this.minutes}:${this.seconds}`)
+
+       if (operation === 1){
+
+            this.hours = this.hours + addHour;
+            this.minutes =  this.minutes + addMinute;
+            this.seconds = this.seconds + addSecond;
+
+            if (this.seconds >= 60){
+                this.seconds -= 60;
+                this.minutes++;
+            }else if (this.minutes >= 60){
+                this.minutes -= 60;
+                this.hours++;
+                
+                if (this.hours >= 24){this.hours = 0};
+            };
+            
+            console.log(`Adjusted time is: ${this.hours}:${this.minutes}:${this.seconds}`)
+
+            return `${this.hours}:${this.minutes}:${this.seconds}`
+
+        } else if (operation === 0){
+            this.hours = this.hours - addHour;
+            this.minutes =  this.minutes - addMinute;
+            this.seconds = this.seconds - addSecond;
+
+            if (this.seconds <= 0){
+                this.seconds += 60;
+                this.minutes--;
+            }else if (this.minutes <= 0){
+                this.minutes += 60;
+                this.hours--;
+                
+                if (this.hours <= 0){this.hours += 24};
+            };
+            
+            console.log(`Adjusted time is: ${this.hours}:${this.minutes}:${this.seconds}`)
+            return `${this.hours}:${this.minutes}:${this.seconds}`
+        }
+    },
+};
+
+// Time calculator UI
+
+let currentTimeEl = document.querySelector('.time-current');
+
+currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
 
