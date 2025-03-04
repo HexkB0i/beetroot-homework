@@ -127,7 +127,30 @@ const adjustableTime = {
 
 // Time calculator UI
 
-let currentTimeEl = document.querySelector('.time-current');
+function refreshTime(){
+    currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
+};
 
+let currentTimeEl = document.querySelector('.time-current');
 currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
 
+
+let hourInput = document.querySelector('#hour-input').valueAsNumber;
+let minuteInput = document.querySelector('#minute-input').valueAsNumber;
+let secondInput = document.querySelector('#second-input').valueAsNumber;
+
+let btnAdd = document.querySelector('#btn-add');
+let btnSubtract = document.querySelector('#btn-subtract');
+ 
+function addTime() {
+    let res = adjustableTime.changeTime(hourInput, minuteInput, secondInput, 1);
+    document.querySelector('.adjust-result').innerHTML = `<span>The adjusted time is ${res}</span>` 
+};
+
+function subtractTime() {
+    let res = adjustableTime.changeTime(hourInput, minuteInput, secondInput, 0);
+    document.querySelector('.adjust-result').innerHTML = `<span>The adjusted time is ${res}</span>` 
+};
+
+btnAdd.addEventListener('click', addTime);
+btnSubtract.addEventListener('click', subtractTime);

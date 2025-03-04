@@ -1,0 +1,34 @@
+.header{
+  text-align: center;
+  font-family: monospace;
+}
+
+.main{
+  text-align: center;
+  font-family: monospace;
+
+  margin-top: 60px;
+
+  .adjustment{
+    .fields{
+      margin-top: 10px;
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      gap: 20px;;
+
+      margin-top: 20px;
+       
+      .buttons-item{
+        width: 30px;
+      }
+    }
+  }
+
+  .adjust-result{
+    text-align: center; 
+    font-size: 38px;
+    font-family: monospace;
+  }
+}
