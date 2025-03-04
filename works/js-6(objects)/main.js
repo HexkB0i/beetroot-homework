@@ -44,7 +44,7 @@ const auto= {
             
             let breakTime = 0;
             if (time >= 4){
-                breakTime = time / 4
+                breakTime = time % 4
             }
 
 
