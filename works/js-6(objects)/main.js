@@ -53,8 +53,7 @@ const auto= {
                 timeDisplay = `${minutes.toFixed(0)} minutes`;
             }else{
                 hours = time + breakTime;
-                timeDisplay = `${hours.toFixed(1)} hours`;
-            };
+                timeDisplay = `${hours.toFixed(1)} hours`; };
 
             let fuelDisplay = distance * fuelPerKm
 
@@ -93,13 +92,13 @@ const adjustableTime = {
             if (this.seconds >= 60){
                 this.seconds -= 60;
                 this.minutes++;
-            }else if (this.minutes >= 60){
-                this.minutes -= 60;
-                this.hours++;
-                
-                if (this.hours >= 24){this.hours = 0};
             };
-            
+            if (this.minutes >= 60){
+                this.minutes -= 60;
+                this.hours++;                
+            };
+            if (this.hours >= 24){this.hours = 0};
+
             console.log(`Adjusted time is: ${this.hours}:${this.minutes}:${this.seconds}`)
 
             return `${this.hours}:${this.minutes}:${this.seconds}`
@@ -112,13 +111,13 @@ const adjustableTime = {
             if (this.seconds <= 0){
                 this.seconds += 60;
                 this.minutes--;
-            }else if (this.minutes <= 0){
+            };
+            if (this.minutes <= 0){
                 this.minutes += 60;
                 this.hours--;
-                
-                if (this.hours <= 0){this.hours += 24};
             };
-            
+            if (this.hours <= 0){this.hours += 24};
+           
             console.log(`Adjusted time is: ${this.hours}:${this.minutes}:${this.seconds}`)
             return `${this.hours}:${this.minutes}:${this.seconds}`
         }
@@ -126,13 +125,13 @@ const adjustableTime = {
 };
 
 // Time calculator UI
+let currentTimeEl = document.querySelector('.time-current');
 
 function refreshTime(){
-    currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
+    return currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
 };
 
-let currentTimeEl = document.querySelector('.time-current');
-currentTimeEl.innerText = `The current time is ${adjustableTime.printTime()}`;
+setInterval(refreshTime, 1000);
 
 
 let hourInput = document.querySelector('#hour-input').valueAsNumber;
