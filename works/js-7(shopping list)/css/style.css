@@ -1,6 +1,32 @@
-.heading {
+body {
+  background: #282A36;
+  color: #F8F8F2;
   font-family: monospace;
+}
+body button {
+  font-family: monospace;
+  background: #FFB86C;
+  border: 1px solid #282A36;
+}
+body input {
+  font-family: monospace;
+  background: #44475A;
+  color: #F8F8F2;
+  border: 1px solid #282A36;
+}
+
+.heading {
   font-size: 38px;
+}
+
+.products {
+  font-family: monospace;
+  font-size: 18px;
+}
+.products-list__item {
+  width: 100%;
+  display: flex;
+  gap: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

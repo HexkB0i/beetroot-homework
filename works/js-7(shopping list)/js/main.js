@@ -43,12 +43,19 @@ function addProduct(){
 
 function printProductList(){
    for(let el of productList){
-        listField.innerHTML += `<li>${el.name} - x${el.amount} - ${el.isBought}</li>`
+        listField.innerHTML += `
+            <li class="products-list__item" id="${el.id}"
+                <span>${el.name}</span>
+                <span>x${el.amount}</span>
+                <input type="checkbox" id="list-check">
+            </li>
+        `
     };
 };
 
 function btnAddAction(){
-    listField.innerHTML = ``;
+    listField.innerHTML = `
+`;
     addProduct();
     printProductList();
 };

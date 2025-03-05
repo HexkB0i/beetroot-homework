@@ -1,4 +1,42 @@
-.heading{
+$bg-color: #282A36;
+$text-color: #F8F8F2;
+$line-color: #44475A;
+$acc1-color: #FFB86C;
+
+body{
+  background: $bg-color;
+  color: $text-color;
   font-family: monospace;
+
+  button{
+    font-family: monospace;
+    background: $acc1-color;
+    border: 1px solid $bg-color;
+  }
+
+  input{
+    font-family: monospace;
+    background: $line-color;
+    color: $text-color;
+    border: 1px solid $bg-color;
+  }
+}
+
+
+
+.heading{
   font-size: 38px;
+}
+
+.products{
+  font-family: monospace;
+  font-size: 18px;
+
+  &-list{
+    &__item{
+      width: 100%;
+      display: flex;
+      gap: 40px;
+    }
+  }
 }
