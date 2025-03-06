@@ -46,7 +46,7 @@ function printProductList(){
         listField.innerHTML += `
             <li class="products-list__item" id="${el.id}"
                 <span>${el.name}</span>
-                <span>x${el.amount}</span>
+                <span>${el.amount}</span>
                 <input type="checkbox" id="list-check">
             </li>
         `

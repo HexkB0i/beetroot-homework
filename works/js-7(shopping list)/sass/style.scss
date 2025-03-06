@@ -26,11 +26,24 @@ body{
 
 .heading{
   font-size: 38px;
+  text-align: center;
+}
+
+.controls{
+  width: 40%;
+  margin: 0 auto;
+
+  &-btns{
+    margin-top: 15px;
+  }
 }
 
 .products{
   font-family: monospace;
   font-size: 18px;
+
+  width: 40%;
+  margin: 0 auto;
 
   &-list{
     &__item{
