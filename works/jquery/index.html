@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @font-face {
+            font-family: nerd;
+                src: url(fonts/MesloLGSNerdFontMono-Regular.ttf);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="h-screen bg-zinc-800">
+        <header class="header mb-9">
+            <h1 class="text-5xl text-stone-100 font-mono text-center mt-10">Guest Book</h1>
+            <h4 class="text-stone-100 font-mono text-center">Leave your comments here.</h4>
+        </header>
+        <main class="main">
+            <section class="comments-block border border-slate-100 bg-gray-300 flex-column space-y-2 w-[60%] mr-auto ml-auto mt-5 p-3 pb-8">
+                <article class="comment">
+                    <div class="comment-title flex itms-center gap-4">
+                        <h3 class="comment-user font-mono text-stone-900 text-2xl pt-2 mb-2">Name Nameson</h3>
+                        <span style="font-family: nerd;" class="text-4xl mb-2 text-green-600">󰔓</span>
+                    </div>
+                    <p class="comment-text font-mono text-stone-900">This is a comment. I liked the product very much and would like to buy it again.</p>
+                </article>
+            </section>
+            <form class="controls flex-column space-y-2 w-[60%] ml-auto mr-auto mt-4">
+                <span class="flex font-mono text-xl text-slate-100 rounded-xs">Name:</span>
+                <input id="name-inpt" type="text" placeholder="Name" class="font-mono bg-slate-100 rounded-xs p-1"> 
+                <span class="flex font-mono text-xl text-slate-100 rounded-xs">Comment:</span>
+                <textarea id="comment-inpt" name="review" placeholder="Your comment" class="font-mono bg-slate-100 rounded-xs w-[60%] p-1"></textarea>
+                <span class="flex font-mono text-xl text-slate-100 rounded-xs mt-2">Did you like it?</span>
+                <div class="checkboxes flex gap-10">
+                    <div class="check-block">
+                        <input type="radio" name="like" id="check-yes">
+                        <label for="check-yes" class="font-mono text-stone-100">Yes!</label>
+                    </div>
+                    <div class="check-block">
+                        <input type="radio" name="like" id="check-no">
+                        <label for="check-no" class="font-mono text-stone-100">No.</label>
+                    </div>
+                </div>
+                <div class="btns flex gap-3 mt-4">
+                    <button id="btn-comment" type="button" class="bg-lime-600 p-1 rounded-xs font-mono hover:bg-lime-700 duration-200">Comment</button>
+                    <button id="btn-reset" type="reset" class="bg-red-700 p-1 rounded-xs font-mono hover:bg-red-800 duration-200">Clear</button>
+                </div>
+            </form>
+        </main>
+    <script src="main.js"></script>
+</body>
+</html>
