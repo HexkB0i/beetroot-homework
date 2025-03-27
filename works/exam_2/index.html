@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monticello</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/lightgallery.css">
+    <link rel="stylesheet" href="./css/lg-zoom.css">
+    <link rel="stylesheet" href="./css/lg-thumbnail.css">
+    <link rel="stylesheet" href="./css/lightgallery-core.css">
+
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="./assets/img/Logo.svg" alt="Monticello">
+                </div>
+                <input type="checkbox" name="burger" id="nav-burger" class="burger">
+                <label class="burger-img" for="nav-burger"></label>
+                <ul class="nav-menu">
+                    <li class="nav-menu__el"><a href="#about">ABOUT US</a></li>
+                    <li class="nav-menu__el"><a href="#gallery">PROJECTS</a></li>
+                    <li class="nav-menu__el"><a href="#news">NEWS</a></li>
+                    <li class="nav-menu__el"><a href="#contact">CONTACT</a></li>
+                </ul>
+
+
+
+                <div class="nav-socials">
+                    <a class="nav-socials__el facebook" href="#"></a>
+                    <a class="nav-socials__el twitter" href="#"></a>
+                    <a class="nav-socials__el insta" href="#"></a>
+                </div>
+            </nav>
+        </div>
+
+        <section class="slider">
+            <div class="slide">
+                <div class="slide__content sl-content ">
+                    <h2 class="sl-content__title">SIMPLE & MODERN</h2>
+                    <h4 class="sl-content__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h4>
+                </div>
+                <img src="./assets/img/slider1.png" alt="" class="slide__img">
+            </div>
+            <div class="slide">
+                <div class="slide__content sl-content">
+                    <h2 class="sl-content__title">SAPCIOUS & BRIGHT</h2>                        
+                    <h4 class="sl-content__subtitle">LIVING SPACES FOR LIVING PEOPLE</h4>
+                </div>
+                <img src="./assets/img/gallery/gallery5.jpg" alt="" class="slide__img">
+            </div>
+            <div class="slide">
+                <div class="slide__content sl-content">
+                    <h2 class="sl-content__title">MODERN COMFORT</h2>
+                    <h4 class="sl-content__subtitle">ENJOY EVERY MOMENT</h4>
+                </div>
+                <img src="./assets/img/gallery/gallery4.jpg" alt="" class="slide__img">
+            </div>    
+        </section>
+
+        <a href="#about" class="scroll-arrow">
+            <img src="./assets/img/Arrow.svg" alt="arrow">
+        </a>
+    </header>
+    <main class="main">
+        <div class="container-main">
+            <section id="about" class="about">
+                <div class="about-line"></div>
+                <h1 class="about-title">WHAT WE DO</h1>
+    
+                <article class="card">
+                    <div class="card-visuals">
+                        <div class="card-square__left"></div>
+                        <img src="./assets/img/about1.png" alt="round building" class="card-img__left">
+                    </div>
+                    <div class="card-text">
+                        <h2 class="card-text__pretitle">ONE WORLD</h2>
+                        <h1 class="card-text__title">TRADE CENTER</h1>
+                        <p class="card-text__p">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                        <button class="btn-details">MORE DETAILS</button>
+                        <span class="card-text__location"><span class="location__pin"></span>New York City, United States - 1776 feet</span>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <div class="card-text card-right">
+                        <h2 class="card-text__pretitle">INTERNATIONAL</h2>
+                        <h1 class="card-text__title">COMMERCE CENTRE</h1>
+                        <p class="card-text__p">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                        <button class="btn-details">MORE DETAILS</button>
+                        <span class="card-text__location"><span class="location__pin"></span>Hong Kong - 1588 feet</span>
+                    </div>
+    
+                    <div class="card-visuals card-right__visuals">
+                        <img src="./assets/img/about2.png" alt="round building" class="card-img__right">
+                        <div class="card-square__right"></div>
+                    </div>
+    
+                </article>
+            </section>
+
+            <section class="news" id="news">
+                <div class="news-line"></div>
+                <h1 class="news-title">LATEST NEWS</h1>
+
+                <article class="news-slider">
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide1.png" alt="window">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h2>
+                            <p class="news-slide__info-p">Free directories: directories are perfect for customers that are searching for...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author1.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">ALJA BRUN</span>
+                                    <span class="author-text__date">20 Jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide2.png" alt="facade">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">EFFECTIVE ADVERTISING POINTERS.</h2>
+                            <p class="news-slide__info-p">Having a home based business is a wonderful asset to your life...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author2.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">DOMINIC FREEMAN</span>
+                                    <span class="author-text__date">13 Dec 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide3.png" alt="ronded facade">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">HYPNOTIZE YOURSELF INTO THE GHOST.</h2>
+                            <p class="news-slide__info-p">There are many things that are important to catalog design...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author3.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">ALICE WARD</span>
+                                    <span class="author-text__date">30 Nov 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide4.jpg" alt="window">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h2>
+                            <p class="news-slide__info-p">Free directories: directories are perfect for customers that are searching for...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author1.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">ALJA BRUN</span>
+                                    <span class="author-text__date">20 Jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide5.jpg" alt="facade">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">EFFECTIVE ADVERTISING POINTERS.</h2>
+                            <p class="news-slide__info-p">Having a home based business is a wonderful asset to your life...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author2.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">DOMINIC FREEMAN</span>
+                                    <span class="author-text__date">13 Dec 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="./assets/img/news-slide6.jpg" alt="ronded facade">
+                        <div class="news-slide__info">
+                            <h2 class="news-slide__info-h">HYPNOTIZE YOURSELF INTO THE GHOST.</h2>
+                            <p class="news-slide__info-p">There are many things that are important to catalog design...</p>
+                            <div class="news-slide__author">
+                                <img src="./assets/img/news-author3.png" alt="Dominic">
+                                <div class="author-text">
+                                    <span class="author-text__name">ALICE WARD</span>
+                                    <span class="author-text__date">30 Nov 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="gallery" id="gallery">
+                <div class="about-line"></div>
+                <h1 class="about-title">GALLERY</h1>
+
+                <article class="grid" id="grid-gallery">
+                    <a href="./assets/img/gallery/gallery1.jpg" class="grid-el grid-el__big">
+                        <img src="./assets/img/gallery/gallery1-min.jpg" alt="" class="grid-el__img">
+                    </a>
+                    <a href="./assets/img/gallery/gallery2.jpg" class="grid-el">
+                        <img src="./assets/img/gallery/gallery2-min.jpg" alt="" class="grid-el__img">
+                    </a>
+                    <a href="./assets/img/gallery/gallery3.jpg" class="grid-el">
+                        <img src="./assets/img/gallery/gallery3-min.jpg" alt="" class="grid-el__img">
+                    </a>
+                    <a href="./assets/img/gallery/gallery4.jpg" class="grid-el">
+                        <img src="./assets/img/gallery/gallery4-min.jpg" alt="" class="grid-el__img">
+                    </a>
+                    <a href="./assets/img/gallery/gallery5.jpg" class="grid-el">
+                        <img src="./assets/img/gallery/gallery5-min.jpg" alt="" class="grid-el__img">
+                    </a>
+                </article>
+                <button class="btn-details">SEE MORE</button>
+            </section>
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5566.958957865688!2d4.831401086785898!3d45.76158028095997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sse!4v1743036719880!5m2!1sen!2sse"
+                    width="100%" 
+                    height="700px" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <section class="contact" id="contact">
+                <div class="about-line"></div>
+                <h1 class="about-title">GET IN TOUCH</h1>
+                <div class="contact-info">
+                    <div class="contact-info__text">
+                        <span><span class="icon"></span>91 Nolan Extensions Suite 670</span>
+                        <span><span class="icon"></span>+001 356-868-2454</span>
+                        <span><span class="icon"></span>montichello@service.com</span>
+                        <span><span class="icon">󱑓</span>From 07:05AM to 19:30PM</span>
+                    </div>
+                    <form class="contact-info__form">
+                        <div class="input-group">
+                            <input type="text" class="input-name" placeholder="" id="contact-name">
+                            <label for="contact-name" class="contact-label">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" class="input-email" placeholder="" id="contact-email">
+                            <label for="contact-email" class="contact-label">Email</label>
+                        </div>
+                        <button class="btn-contact__submit">SUBMIT</button>
+                    </form>
+                </div>
+            </section>
+            <section class="footer-notes">
+                <div class="footer-notes__copyright">
+                    <img src="./assets/img/Logo.svg" alt="Monticello">
+                    <span>Copyrights © 2020 Montichello</span>
+                </div>
+                <div class="footer-notes__socials nav-socials">
+                    <a class="nav-socials__el facebook" href="#"></a>
+                    <a class="nav-socials__el twitter" href="#"></a>
+                    <a class="nav-socials__el insta" href="#"></a>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+<script src="./js/lightgallery.umd.js"></script>
+<script src="./js/lg-thumbnail.min.js"></script>
+<script src="./js/lg-zoom.min.js"></script>
+<script src="./js/gallery.js"></script>
+
+<script src="./js/slider.js"></script>
+</body>
+</html>
