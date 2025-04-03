@@ -1,0 +1,79 @@
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+}
+
+body{ 
+    background-color: $bg-main;
+    color: $foreground;
+    font-family: monospace;
+}
+
+input, select, button{
+    font-family: monospace;
+    border-radius: 2px;
+    border: none;
+    padding: 5px;
+}
+
+.header{
+    &-title{
+        font-size: 45px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.main{
+    display: flex;
+
+    .inputs{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    
+        &-form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+    
+            font-size: 20px;
+    
+            input, select{
+                height: 25px;
+                width: 100%;
+            }
+            &__btns{
+                display: flex;
+                gap: 20px;
+    
+                #btn-submit{
+                    color: $bg-main;
+                    background-color: $green;
+                }
+                #btn-reset{
+                    color: $bg-main;
+                    background-color: $red;
+                }
+            }
+        }    
+    }
+    
+    .display{
+        list-style: none;
+
+        width: 60%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        font-size: 18px;
+    }
+}
+
+
+

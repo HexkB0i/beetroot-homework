@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student list</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Student List</h1>
+    </header>
+    <main class="main">
+        <section class="inputs">
+            <form action="#" class="inputs-form">
+                <label for="name">Student Name</label>
+                <input type="text" name="name" id="name" placeholder="Richard Johnson" required>
+                <label for="city">Student City</label>
+                <input type="text" name="city" id="city" placeholder="Miami" required>
+                <label for="course">Enrolled Course</label>
+                <select name="course" id="course" required>
+                    <option value="" selected disabled>--Please choose an option--</option>
+                    <option value="Front-End Development">Front-End Development</option>
+                    <option value="Back-End Development">Back-End Development</option>
+                    <option value="Project Management">Project Management</option>
+                </select>
+                <div class="inputs-form__btns">
+                    <button id="btn-submit" type="button">Submit</button>
+                    <button id="btn-reset" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+        <ul class="display">
+        </ul>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
