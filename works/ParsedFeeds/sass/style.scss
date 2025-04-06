@@ -1,0 +1,121 @@
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    color: $text;
+    background-color: $bg-color;
+    font-family: monospace;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .slants{
+        display: flex;
+        gap: 5px;
+        
+        &-el{
+            width: 25px;
+            height: 45px;
+            transform: skew(-15deg);
+            background: $red;
+        }
+        .red{
+            background-color: $red;
+        }
+        .orange{
+            background-color: $orange;
+        }
+        .yellow{
+            background-color: $yellow;
+        }
+    }
+
+    &-title{
+        font-size: 45px;
+        font-style: italic;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn-load{
+        width: 200px;
+        height: 75px;
+        margin-top: 50px;
+
+        background-color: $link-btn;
+        font-size: 20px;
+        border: none;
+        border-radius: 6px;
+        font-family: monospace;
+        font-weight: bold;
+        color: $text;
+        cursor: pointer;
+
+        transition: background-color, 0.25s;
+        transition-timing-function: ease-in-out;
+
+        &:hover{
+            background-color: $link-btn-hover;
+        }
+    }
+
+    .display{
+        width: 70%;
+        height: 100px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .item{
+            background-color: $bg-item;
+            width: 100%;
+            padding: 15px;
+
+            &-title{
+                font-size: 24px;
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                &__link{
+                    text-decoration: none;
+                    color: $text;
+                    background-color: $link-btn;
+                    font-size: 15px;
+
+                    padding: 5px 10px;
+                    border-radius: 3px;
+                    transition: background-color, 0.25s;
+                    transition-timing-function: ease-in-out;
+
+
+                    &:hover{
+                        background-color: $link-btn-hover;
+                    }
+                }
+            }
+            &-date{
+                font-size: 14px;
+                color: $date;
+            }
+            &-desc{
+                font-size: 16px;
+                font-style: italic;
+            }
+        }
+    }
+}
