@@ -32,7 +32,7 @@ def request_articles(url):
 
 list(map(request_articles, urls))
 
-print(article_list[1])
+# print(article_list[1])
 
 # Function to pass the GET response
 def export_feeds_JSON():
