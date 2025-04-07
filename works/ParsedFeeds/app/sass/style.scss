@@ -3,7 +3,10 @@
 * {
     box-sizing: border-box;
 }
-
+html, body{
+    height: auto;
+    min-height: 100%;
+}
 body{
     color: $text;
     background-color: $bg-color;
@@ -44,6 +47,7 @@ body{
 }
 
 .main{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,9 +85,11 @@ body{
         gap: 15px;
 
         .item{
+            position: relative;
             background-color: $bg-item;
             width: 100%;
             padding: 15px;
+            padding-bottom: 0;
 
             &-title{
                 font-size: 24px;
@@ -116,6 +122,63 @@ body{
                 font-size: 16px;
                 font-style: italic;
             }
+            &-content{
+                width: calc(100% + 30px);
+                margin: 10px -15px 0px -15px;
+
+                .collapsible{
+                    background-color: $expand;
+                    color: $text;
+                    cursor: pointer;
+
+                    padding: 10px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+
+                    text-align: center;
+                    font-size: 15px;
+                    font-family: monospace;
+
+                    transition: background-color, 0.3s;
+                }
+                .active, .collapsible:hover {
+                    background-color: $text;
+                    color: $expand;
+                }
+                .content {
+                    padding: 0 18px;
+                    background-color: $bg-item;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+
+                    font-size: 15px;
+
+                    &-image{
+                        object-fit: contain;
+                        width: 100%;
+                        height: auto;
+                        display: inline-block;
+                        border-radius: 3px;
+                    }
+
+                    span{
+                        display: inline-block;
+                        color: $date;
+                        font-size: 11px;
+                        font-style: italic;
+                        margin: 10px;
+                    }
+                    div{
+                        margin-top: 15px;
+                    };
+                  }
+            }
         }
     }
+}
+
+.footer{
+    height: 50px;
 }

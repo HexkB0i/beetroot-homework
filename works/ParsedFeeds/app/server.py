@@ -1,6 +1,6 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
-from python.feeds import export_feeds_JSON
+from python.feedsNew import export_feeds_JSON
 
 class Serv(BaseHTTPRequestHandler):
 

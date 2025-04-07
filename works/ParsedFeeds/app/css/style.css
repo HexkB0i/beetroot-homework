@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
 body {
   color: #3b4252;
   background-color: #d8dee9;
@@ -39,6 +44,7 @@ body {
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,9 +77,11 @@ body {
   gap: 15px;
 }
 .main .display .item {
+  position: relative;
   background-color: #e5e9f0;
   width: 100%;
   padding: 15px;
+  padding-bottom: 0;
 }
 .main .display .item-title {
   font-size: 24px;
@@ -101,6 +109,56 @@ body {
 .main .display .item-desc {
   font-size: 16px;
   font-style: italic;
+}
+.main .display .item-content {
+  width: calc(100% + 30px);
+  margin: 10px -15px 0px -15px;
+}
+.main .display .item-content .collapsible {
+  background-color: #b3bac6;
+  color: #3b4252;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  font-family: monospace;
+  transition: background-color, 0.3s;
+}
+.main .display .item-content .active, .main .display .item-content .collapsible:hover {
+  background-color: #3b4252;
+  color: #b3bac6;
+}
+.main .display .item-content .content {
+  padding: 0 18px;
+  background-color: #e5e9f0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 15px;
+}
+.main .display .item-content .content-image {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 3px;
+}
+.main .display .item-content .content span {
+  display: inline-block;
+  color: #81a1c1;
+  font-size: 11px;
+  font-style: italic;
+  margin: 10px;
+}
+.main .display .item-content .content div {
+  margin-top: 15px;
+}
+
+.footer {
+  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
