@@ -1,6 +1,8 @@
-docker load -i technica.tar      --- Load the image
+### Load the image
+docker load -i technica.tar
 
-docker run -p 8080:8080 bbcamel/technica:latest     --- Run the app
+### Run the app
+docker run -p 8080:8080 bbcamel/technica:latest
 
 *interface is at the port 8080*
 
